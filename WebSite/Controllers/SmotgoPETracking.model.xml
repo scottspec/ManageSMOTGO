@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="SmotgoPETracking" alias="SmotgoPETracking" created="2018-01-06T17:02:15" modified="2018-01-06T17:02:17" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="SmotgoPETrackingID" fieldName="SmotgoPETrackingID" label="Smotgo PE Tracking#" />
+    <column name="CompanyName" fieldName="CompanyName" label="Company Name" />
+    <column name="CreatedOn" fieldName="CreatedOn" label="Created On" format="g" />
+    <column name="Action" fieldName="Action" label="Action" />
+  </columns>
+</dataModel>

@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="Company_Status" conflictDetection="overwriteChanges" label="Company Status" handler="MyCompany.Rules.Login_Last_Date_BusinessRules" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"Company_Status"."Company_Status_ID" "Company_Status_ID"
+	,"Company_Status"."Company_ID" "Company_ID"
+	,"Company_Status"."User_Name" "User_Name"
+	,"Company_Status"."Name" "Name"
+	,"Company_Status"."City" "City"
+	,"Company_Status"."State" "State"
+	,"Company_Status"."Created_On" "Created_On"
+	,"Company_Status"."First_Log_In" "First_Log_In"
+	,"Company_Status"."Last_Log_In" "Last_Log_In"
+	,"Company_Status"."Log_Ins" "Log_Ins"
+	,"Company_Status"."Invoices" "Invoices"
+	,"Company_Status"."Invoice_Total" "Invoice_Total"
+	,"Company_Status"."History_Count" "History_Count"
+	,"Company_Status"."History_Total" "History_Total"
+	,"Company_Status"."Customers" "Customers"
+	,"Company_Status"."Vehicles" "Vehicles"
+	,"Company_Status"."Parts" "Parts"
+	,"Company_Status"."Total_Pages" "Total_Pages"
+	,"Company_Status"."Daily_Pages" "Daily_Pages"
+	,"Company_Status"."Is_Deleted" "Is_Deleted"
+from "dbo"."Company_Status" "Company_Status"
+]]></text>
+    </command>
+    <command id="Company_Status_IDIdentityCommand" type="Text" event="Inserted">
+      <text><![CDATA[select @@identity]]></text>
+      <output>
+        <fieldOutput fieldName="Company_Status_ID" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="Company_Status_ID" type="Int32" allowNulls="false" isPrimaryKey="true" label="CompanyStatus#" readOnly="true" />
+    <field name="Company_ID" type="Int32" label="Company#" showInSummary="true" />
+    <field name="User_Name" type="String" label="User Name" length="256" showInSummary="true" />
+    <field name="Name" type="String" label="Name" length="80" showInSummary="true" />
+    <field name="City" type="String" label="City" length="50" showInSummary="true" />
+    <field name="State" type="String" label="State" length="2" showInSummary="true" />
+    <field name="Created_On" type="DateTime" label="Created On" />
+    <field name="First_Log_In" type="DateTime" label="First Log In" />
+    <field name="Last_Log_In" type="DateTime" label="Last Log In" />
+    <field name="Log_Ins" type="Int32" label="Log Ins" />
+    <field name="Invoices" type="Int32" label="Invoices" />
+    <field name="Invoice_Total" type="Int32" label="Invoice Total" />
+    <field name="History_Count" type="Int32" label="History Count" />
+    <field name="History_Total" type="Int32" label="History Total" />
+    <field name="Customers" type="Int32" label="Customers" />
+    <field name="Vehicles" type="Int32" label="Vehicles" />
+    <field name="Parts" type="Int32" label="Parts" />
+    <field name="Total_Pages" type="Int32" label="Total Pages" />
+    <field name="Daily_Pages" type="Int32" label="Daily Pages" />
+    <field name="Is_Deleted" type="Boolean" default="((0))" label="Is Deleted" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Company Status" filter="(Company_ID &gt; 3)" sortExpression="Last_Log_In desc">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="Last_Log_In" columns="10" dataFormatString="g" />
+        <dataField fieldName="User_Name" />
+        <dataField fieldName="Name" />
+        <dataField fieldName="City" columns="50" />
+        <dataField fieldName="State" columns="2" />
+        <dataField fieldName="Created_On" columns="10" />
+        <dataField fieldName="First_Log_In" columns="10" />
+        <dataField fieldName="Log_Ins" columns="15" aggregate="Sum" />
+        <dataField fieldName="Invoices" columns="15" aggregate="Sum" />
+        <dataField fieldName="Invoice_Total" columns="15" dataFormatString="c" aggregate="Sum" />
+        <dataField fieldName="History_Count" columns="15" aggregate="Sum" />
+        <dataField fieldName="History_Total" columns="15" dataFormatString="c" aggregate="Sum" />
+        <dataField fieldName="Customers" columns="15" aggregate="Sum" />
+        <dataField fieldName="Vehicles" columns="15" aggregate="Sum" />
+        <dataField fieldName="Parts" columns="15" aggregate="Sum" />
+        <dataField fieldName="Total_Pages" columns="15" aggregate="Sum" />
+        <dataField fieldName="Daily_Pages" columns="15" aggregate="Sum" />
+        <dataField fieldName="Company_ID" columns="15" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Company Status">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Company Status" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Company_ID" columns="15" />
+            <dataField fieldName="User_Name" />
+            <dataField fieldName="Name" />
+            <dataField fieldName="City" columns="50" />
+            <dataField fieldName="State" columns="2" />
+            <dataField fieldName="Created_On" columns="10" />
+            <dataField fieldName="First_Log_In" columns="10" />
+            <dataField fieldName="Last_Log_In" columns="10" />
+            <dataField fieldName="Log_Ins" columns="15" />
+            <dataField fieldName="Invoices" columns="15" />
+            <dataField fieldName="Invoice_Total" columns="15" />
+            <dataField fieldName="History_Count" columns="15" />
+            <dataField fieldName="History_Total" columns="15" />
+            <dataField fieldName="Customers" columns="15" />
+            <dataField fieldName="Vehicles" columns="15" />
+            <dataField fieldName="Parts" columns="15" />
+            <dataField fieldName="Total_Pages" columns="15" />
+            <dataField fieldName="Daily_Pages" columns="15" />
+            <dataField fieldName="Is_Deleted" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Company Status">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Company_ID" columns="15" />
+            <dataField fieldName="User_Name" />
+            <dataField fieldName="Name" />
+            <dataField fieldName="City" columns="50" />
+            <dataField fieldName="State" columns="2" />
+            <dataField fieldName="Created_On" columns="10" />
+            <dataField fieldName="First_Log_In" columns="10" />
+            <dataField fieldName="Last_Log_In" columns="10" />
+            <dataField fieldName="Log_Ins" columns="15" />
+            <dataField fieldName="Invoices" columns="15" />
+            <dataField fieldName="Invoice_Total" columns="15" />
+            <dataField fieldName="History_Count" columns="15" />
+            <dataField fieldName="History_Total" columns="15" />
+            <dataField fieldName="Customers" columns="15" />
+            <dataField fieldName="Vehicles" columns="15" />
+            <dataField fieldName="Parts" columns="15" />
+            <dataField fieldName="Total_Pages" columns="15" />
+            <dataField fieldName="Daily_Pages" columns="15" />
+            <dataField fieldName="Is_Deleted" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="available_Grid" type="Grid" commandId="command1" label="Company Status" filter="(Is_Deleted = 1)" sortExpression="Company_ID">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="Last_Log_In" columns="10" dataFormatString="g" />
+        <dataField fieldName="User_Name" />
+        <dataField fieldName="Name" />
+        <dataField fieldName="City" columns="50" />
+        <dataField fieldName="State" columns="2" />
+        <dataField fieldName="Created_On" columns="10" />
+        <dataField fieldName="First_Log_In" columns="10" />
+        <dataField fieldName="Log_Ins" columns="15" aggregate="Sum" />
+        <dataField fieldName="Invoices" columns="15" aggregate="Sum" />
+        <dataField fieldName="Invoice_Total" columns="15" dataFormatString="c" aggregate="Sum" />
+        <dataField fieldName="History_Count" columns="15" aggregate="Sum" />
+        <dataField fieldName="History_Total" columns="15" dataFormatString="c" aggregate="Sum" />
+        <dataField fieldName="Customers" columns="15" aggregate="Sum" />
+        <dataField fieldName="Vehicles" columns="15" aggregate="Sum" />
+        <dataField fieldName="Parts" columns="15" aggregate="Sum" />
+        <dataField fieldName="Total_Pages" columns="15" aggregate="Sum" />
+        <dataField fieldName="Daily_Pages" columns="15" aggregate="Sum" />
+        <dataField fieldName="Company_ID" columns="15" />
+      </dataFields>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Delete" />
+      <action id="a6" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenKeySelected="true" whenClientScript="this.hasDetails()" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a5" />
+      <action id="a6" commandName="Import" commandArgument="createForm1" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag100" scope="ActionBar" headerText="More" flat="false">
+      <action commandName="Custom" commandArgument="Assign" headerText="Assign" whenKeySelected="true" id="a100" />
+      <action commandName="Custom" commandArgument="Reset" headerText="Reset" whenKeySelected="true" id="a101" />
+    </actionGroup>
+  </actions>
+</dataController>

@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="Log_On_Summary" conflictDetection="overwriteChanges" label="Log On Summary" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"Log_On_Summary"."Company_ID" "Company_ID"
+	,"Log_On_Summary"."User_Name" "User_Name"
+	,"Log_On_Summary"."Name" "Name"
+	,"Log_On_Summary"."City" "City"
+	,"Log_On_Summary"."State" "State"
+	,"Log_On_Summary"."Last_Login_On" "Last_Login_On"
+	,"Log_On_Summary"."First_Sign_On_Date" "First_Sign_On_Date"
+	,"Log_On_Summary"."Total_Log_In" "Total_Log_In"
+	,"Log_On_Summary"."Invoices" "Invoices"
+from "dbo"."Log_On_Summary" "Log_On_Summary"
+]]></text>
+    </command>
+  </commands>
+  <fields>
+    <field name="Company_ID" type="Int32" label="Company#" showInSummary="true" />
+    <field name="User_Name" type="String" label="User Name" length="255" showInSummary="true" />
+    <field name="Name" type="String" label="Name" length="80" showInSummary="true" />
+    <field name="City" type="String" label="City" length="50" showInSummary="true" />
+    <field name="State" type="String" label="State" length="2" showInSummary="true" />
+    <field name="Last_Login_On" type="String" label="Last Login On" length="10" />
+    <field name="First_Sign_On_Date" type="String" label="First Sign On Date" length="10" />
+    <field name="Total_Log_In" type="Int32" label="Total Log In" />
+    <field name="Invoices" type="Int32" label="Invoices" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Log On Summary" sortExpression="Last_Login_On desc">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="Company_ID" columns="15" />
+        <dataField fieldName="User_Name" />
+        <dataField fieldName="Name" />
+        <dataField fieldName="City" columns="50" />
+        <dataField fieldName="State" columns="2" />
+        <dataField fieldName="Last_Login_On" columns="10" />
+        <dataField fieldName="First_Sign_On_Date" columns="10" />
+        <dataField fieldName="Total_Log_In" columns="15" />
+        <dataField fieldName="Invoices" columns="15" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Log On Summary">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Log On Summary" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Company_ID" columns="15" />
+            <dataField fieldName="User_Name" />
+            <dataField fieldName="Name" />
+            <dataField fieldName="City" columns="50" />
+            <dataField fieldName="State" columns="2" />
+            <dataField fieldName="Last_Login_On" columns="10" />
+            <dataField fieldName="First_Sign_On_Date" columns="10" />
+            <dataField fieldName="Total_Log_In" columns="15" />
+            <dataField fieldName="Invoices" columns="15" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Log On Summary">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Company_ID" columns="15" />
+            <dataField fieldName="User_Name" />
+            <dataField fieldName="Name" />
+            <dataField fieldName="City" columns="50" />
+            <dataField fieldName="State" columns="2" />
+            <dataField fieldName="Last_Login_On" columns="10" />
+            <dataField fieldName="First_Sign_On_Date" columns="10" />
+            <dataField fieldName="Total_Log_In" columns="15" />
+            <dataField fieldName="Invoices" columns="15" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Delete" />
+      <action id="a6" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenKeySelected="true" whenClientScript="this.hasDetails()" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

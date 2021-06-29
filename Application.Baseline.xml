@@ -1,0 +1,531 @@
+<application snapshot="false" xmlns="urn:schemas-codeontime-com:data-aquarium-application" xmlns:m="urn:codeontime:data-map" xmlns:dm="urn:schemas-codeontime-com:data-model">
+  <pages>
+    <page name="Home" title="^HomeTitle^Start^HomeTitle^" description="^HomeDesc^Application home page^HomeDesc^" path="^HomePath^Home^HomePath^" style="HomePage" customStyle="Wide" index="1000">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <controls>
+        <control id="control1" name="TableOfContents" container="container1" />
+      </controls>
+    </page>
+    <page name="Email_Address_Status" title="Email Address Status" description="View Email Address Status" index="1010" path="Email Address Status">
+      <containers>
+        <container id="container1" flow="NewRow" />
+        <container id="container2" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Email_Address_Status" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+        <dataView id="view2" controller="Email_Address" view="grid1" text="Email Address" filterSource="view1" container="container2" filterFields="Email_Address_Status_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+        <dataView id="view3" controller="Email_Message_To_Status" view="grid1" text="Email Message To Status" filterSource="view1" container="container2" filterFields="Email_Address_Status_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows email address status management.</about>
+    </page>
+    <page name="Email_Address" title="Email Address" description="View Email Address" index="1020" path="Email Address Status | Email Address">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Email_Address" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows email address management.</about>
+    </page>
+    <page name="Email_Message_To_Status" title="Email Message To Status" description="View Email Message To Status" index="1030" path="Email Address Status | Email Message To Status">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Email_Message_To_Status" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows email message to status management.</about>
+    </page>
+    <page name="Email_Message" title="Email Message" description="View Email Message" index="1040" path="Email Message">
+      <containers>
+        <container id="container1" flow="NewRow" />
+        <container id="container2" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Email_Message" view="grid1" showInSummary="true" container="container1" activator="None" text="" />
+        <dataView id="view2" controller="Email_Message_To_Status" view="grid1" text="Email Message To Status" filterSource="view1" container="container2" filterFields="Email_Message_ID" activator="Tab" autoHide="Container" pageSize="5" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows email message management.</about>
+    </page>
+    <page name="Company_Status" title="Company Status" description="View Company Status" index="1050" path="Company Status">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Company_Status" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows company status management.</about>
+    </page>
+    <page name="AllReports" title="^ReportsPath^Reports^ReportsPath^" externalUrl="about:blank" index="1060" path="^ReportsPath^Reports^ReportsPath^" />
+    <page name="Company_User" title="Company User" description="View Company User" index="1070" path="^ReportsPath^Reports^ReportsPath^ | Company User">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Company_User" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows company user management.</about>
+    </page>
+    <page name="Company_View" title="Company View" description="View Company View" index="1080" path="^ReportsPath^Reports^ReportsPath^ | Company View">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Company_View" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows company view management.</about>
+    </page>
+    <page name="Customer_View" title="Customer View" description="View Customer View" index="1090" path="^ReportsPath^Reports^ReportsPath^ | Customer View">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Customer_View" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows customer view management.</about>
+    </page>
+    <page name="Demo_Summary" title="Demo Summary" description="View Demo Summary" index="1100" path="^ReportsPath^Reports^ReportsPath^ | Demo Summary">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Demo_Summary" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows demo summary management.</about>
+    </page>
+    <page name="Email_Addresses" title="Email Addresses" description="View Email Addresses" index="1110" path="^ReportsPath^Reports^ReportsPath^ | Email Addresses">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Email_Addresses" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows email addresses management.</about>
+    </page>
+    <page name="Email_History" title="Email History" description="View Email History" index="1120" path="^ReportsPath^Reports^ReportsPath^ | Email History">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Email_History" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows email history management.</about>
+    </page>
+    <page name="Email_Sent" title="Email Sent" description="View Email Sent" index="1130" path="^ReportsPath^Reports^ReportsPath^ | Email Sent">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Email_Sent" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows email sent management.</about>
+    </page>
+    <page name="Invoice_History_Total" title="Invoice History Total" description="View Invoice History Total" index="1140" path="^ReportsPath^Reports^ReportsPath^ | Invoice History Total">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Invoice_History_Total" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows invoice history total management.</about>
+    </page>
+    <page name="Invoice_History_View" title="Invoice History View" description="View Invoice History View" index="1150" path="^ReportsPath^Reports^ReportsPath^ | Invoice History View">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Invoice_History_View" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows invoice history view management.</about>
+    </page>
+    <page name="Invoice_View" title="Invoice View" description="View Invoice View" index="1160" path="^ReportsPath^Reports^ReportsPath^ | Invoice View">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Invoice_View" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows invoice view management.</about>
+    </page>
+    <page name="Job_View" title="Job View" description="View Job View" index="1170" path="^ReportsPath^Reports^ReportsPath^ | Job View">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Job_View" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows job view management.</about>
+    </page>
+    <page name="Log_In" title="Log In" description="View Log In" index="1180" path="^ReportsPath^Reports^ReportsPath^ | Log In">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Log_In" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows log in management.</about>
+    </page>
+    <page name="Log_On_Summary" title="Log On Summary" description="View Log On Summary" index="1190" path="^ReportsPath^Reports^ReportsPath^ | Log On Summary">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Log_On_Summary" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows log on summary management.</about>
+    </page>
+    <page name="Login_First" title="Login First" description="View Login First" index="1200" path="^ReportsPath^Reports^ReportsPath^ | Login First">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Login_First" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows login first management.</about>
+    </page>
+    <page name="Login_Last" title="Login Last" description="View Login Last" index="1210" path="^ReportsPath^Reports^ReportsPath^ | Login Last">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Login_Last" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows login last management.</about>
+    </page>
+    <page name="LogInCount" title="Log In Count" description="View Log In Count" index="1220" path="^ReportsPath^Reports^ReportsPath^ | Log In Count">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="LogInCount" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows log in count management.</about>
+    </page>
+    <page name="Page_View" title="Page View" description="View Page View" index="1230" path="^ReportsPath^Reports^ReportsPath^ | Page View">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Page_View" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows page view management.</about>
+    </page>
+    <page name="Part_View" title="Part View" description="View Part View" index="1240" path="^ReportsPath^Reports^ReportsPath^ | Part View">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Part_View" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows part view management.</about>
+    </page>
+    <page name="Vehicle_View" title="Vehicle View" description="View Vehicle View" index="1250" path="^ReportsPath^Reports^ReportsPath^ | Vehicle View">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <dataViews>
+        <dataView id="view1" controller="Vehicle_View" view="grid1" showInSummary="true" container="container1" activator="None" text="" showModalForms="true" />
+      </dataViews>
+      <controls />
+      <about>This page allows vehicle view management.</about>
+    </page>
+    <page name="Membership" title="^MembershipTitle^Membership Manager^MembershipTitle^" description="^MembershipDesc^User and role manager^MembershipDesc^" roles="Administrators" path="^MembershipPath^Membership^MembershipPath^" style="UsersPage" index="1260">
+      <containers>
+        <container id="container1" flow="NewRow" />
+      </containers>
+      <about>^MembershipAbout^This page allows to manage roles and users.^MembershipAbout^</about>
+      <controls>
+        <control id="control1" name="MembershipManager" container="container1" />
+      </controls>
+    </page>
+  </pages>
+  <userControls>
+    <userControl name="TableOfContents" prefix="uc" generate="Always">
+      <body>
+                
+&lt;div class="ParaInfo"&gt;
+        ^TocInstruction^Please select a page link in the table of contents below.^TocInstruction^&lt;/div&gt;
+&lt;div class="ParaHeader"&gt;
+    ^TocHeader^Site Map^TocHeader^
+&lt;/div&gt;
+&lt;asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="false" /&gt;
+&lt;asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1" CssClass="TreeView"&gt;
+&lt;/asp:TreeView&gt;
+
+&lt;div id="app-sitemap" data-app-role="page" data-activator="Button|^TocHeader^Site Map^TocHeader^"&gt;
+    &lt;p&gt;
+      &lt;span&gt;^TocInstruction^Please select a page link in the table of contents below.^TocInstruction^&lt;/span&gt;
+    &lt;/p&gt;
+    &lt;div data-app-role="sitemap"&gt;&lt;/div&gt;
+    &lt;p&gt;
+      &lt;br /&gt;
+    &lt;/p&gt;
+&lt;/div&gt;
+              </body>
+    </userControl>
+    <userControl name="Welcome" prefix="uc" generate="Always">
+      <body>
+&lt;div style="padding-left:8px"&gt;&lt;div class="ParaInfo"&gt;
+        ^SignInInstruction^Sign in to access the protected site content.^SignInInstruction^&lt;/div&gt;
+&lt;div class="ParaHeader"&gt;
+    ^SignInHeader^Instructions^SignInHeader^
+&lt;/div&gt;
+&lt;div class="ParaText"&gt;
+    ^SignInPara1^Two standard user accounts are automatically created when application is initialized
+    if membership option has been selected for this application.^SignInPara1^
+&lt;/div&gt;
+                  
+&lt;div class="ParaText"&gt;
+    ^SignInPara2^The administrative account &lt;b&gt;admin&lt;/b&gt; is authorized to access all areas of the
+    web site and membership manager. The standard &lt;b&gt;user&lt;/b&gt; account is allowed to
+    access all areas of the web site with the exception of membership manager.^SignInPara2^&lt;/div&gt;
+                
+&lt;div class="ParaText"&gt;
+    &lt;div style="border: solid 1px black; background-color: InfoBackground; padding: 8px;
+        float: left;"&gt;
+        ^AdminDesc^Administrative account^AdminDesc^:&lt;br /&gt;
+        &lt;b title="User Name"&gt;admin&lt;/b&gt; / &lt;b title="Password"&gt;admin123%&lt;/b&gt;
+        &lt;br /&gt;
+        &lt;br /&gt;
+        ^UserDesc^Standard user account^UserDesc^:&lt;br /&gt;
+        &lt;b title="User Name"&gt;user&lt;/b&gt; / &lt;b title="Password"&gt;user123%&lt;/b&gt;
+    &lt;/div&gt;
+    &lt;div style="clear:both;margin-bottom:8px"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id="app-welcome" data-app-role="page" data-activator="Button|^SignInHeader^Instructions^SignInHeader^" data-activator-description="^SignInInstruction^Sign in to access the protected site content.^SignInInstruction^"&gt;
+      &lt;p&gt;^SignInInstruction^Sign in to access the protected site content.^SignInInstruction^&lt;/p&gt;
+      &lt;p&gt;
+          ^SignInPara1^Two standard user accounts are automatically created when application is initialized
+  if membership option has been selected for this application.^SignInPara1^
+      &lt;/p&gt;
+
+      &lt;p&gt;
+          ^SignInPara2^The administrative account &lt;b&gt;admin&lt;/b&gt; is authorized to access all areas of the
+  web site and membership manager. The standard &lt;b&gt;user&lt;/b&gt; account is allowed to
+  access all areas of the web site with the exception of membership manager.^SignInPara2^
+      &lt;/p&gt;
+      &lt;p&gt;
+          ^AdminDesc^Administrative account^AdminDesc^:&lt;br /&gt;
+          &lt;b title="User Name"&gt;admin&lt;/b&gt; / &lt;b title="Password"&gt;admin123%&lt;/b&gt;
+      &lt;/p&gt;
+      &lt;p&gt;
+          ^UserDesc^Standard user account^UserDesc^:&lt;br /&gt;
+          &lt;b title="User Name"&gt;user&lt;/b&gt; / &lt;b title="Password"&gt;user123%&lt;/b&gt;
+      &lt;/p&gt;
+      &lt;p&gt;&lt;a href="#" data-role="button" data-inline="true" data-theme="b" data-app-role="loginstatus" data-icon="lock"&gt;Login Status&lt;/a&gt;&lt;/p&gt;
+
+&lt;/div&gt;</body>
+    </userControl>
+    <userControl name="MembershipManager" prefix="uc" generate="Always">
+      <body>
+              
+&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;body&gt;
+    &lt;div data-activator="Tab|{Web.MembershipResources.Manager.UsersTab}"&gt;
+        &lt;div id="users" data-controller="aspnet_Membership" data-search-by-first-letter="true" data-tags="multi-select-none"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div data-activator="Tab|{Web.MembershipResources.Manager.RolesTab}"&gt;
+        &lt;div id="roles" data-controller="aspnet_Roles" data-tags="multi-select-none"&gt;&lt;/div&gt;
+        &lt;div id="role-users" data-controller="aspnet_Membership" data-view="usersInRolesGrid" 
+             data-filter-source="roles" data-filter-fields="RoleId" data-page-size="5" 
+             data-search-by-first-letter="true" data-auto-hide="self"  data-tags="multi-select-none"
+             data-page-header="{Web.MembershipResources.Manager.UsersInRole}"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+              </body>
+    </userControl>
+    <userControl name="Login" prefix="uc" generate="FirstTimeOnly">
+      <body>
+              
+&lt;div data-app-role="page" data-content-framework="bootstrap"&gt;
+        &lt;div class="navbar navbar-default navbar-static-top" role="navigation"&gt;
+            &lt;div class="container"&gt;
+                &lt;div class="navbar-header"&gt;
+                    &lt;span class="navbar-brand"&gt;Standalone Login Page&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class="navbar-collapse"&gt;
+                    &lt;div class="navbar-form navbar-right" role="form"&gt;
+                        &lt;div class="form-group"&gt;
+                            &lt;input id="login-user-name" type="text" placeholder="Username" class="form-control" autocapitalize="off"&gt;
+                        &lt;/div&gt;
+                        &lt;div class="form-group"&gt;
+                            &lt;input id="login-password" type="password" placeholder="Password" class="form-control"&gt;
+                        &lt;/div&gt;
+                        &lt;button id="login-button" class="btn btn-success"&gt;Sign in&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!--/.navbar-collapse --&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;!-- Main jumbotron for a primary marketing message or call to action --&gt;
+        &lt;div class="jumbotron"&gt;
+            &lt;div class="container"&gt;
+                &lt;h1&gt;&lt;span class="glyphicon glyphicon-globe"&gt;&lt;/span&gt;&amp;nbsp;Hello, world!&lt;/h1&gt;
+                &lt;p&gt;
+                    This is a template for a custom login screen. It includes a large callout called a jumbotron and three supporting content blocks.
+                    Edit the "~/Login.html" page in Visual Studio to create something more unique.
+                &lt;/p&gt;
+
+                &lt;p&gt;&lt;a href="#" class="btn btn-primary btn-lg" role="button"&gt;Learn more &amp;raquo;&lt;/a&gt;&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="container"&gt;
+
+            &lt;div class="row"&gt;
+                &lt;div class="col-sm-8"&gt;
+                    &lt;h2&gt;^SignInInstruction^Sign in to access the protected site content.^SignInInstruction^&lt;/h2&gt;
+                    &lt;p&gt;
+                        ^SignInPara1^Two standard user accounts are automatically created when application is initialized
+                        if membership option has been selected for this application.^SignInPara1^
+                    &lt;/p&gt;
+
+                    &lt;p&gt;
+                        ^SignInPara2^The administrative account &lt;b&gt;admin&lt;/b&gt; is authorized to access all areas of the
+                        web site and membership manager. The standard &lt;b&gt;user&lt;/b&gt; account is allowed to
+                        access all areas of the web site with the exception of membership manager.^SignInPara2^
+                    &lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="col-sm-4"&gt;
+                    &lt;div class="panel panel-success"&gt;
+                        &lt;div class="panel-heading"&gt;
+                            &lt;span&gt;^AdminDesc^Administrative account^AdminDesc^&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class="panel-body"&gt;
+                            User Name: &lt;b title="User Name"&gt;admin&lt;/b&gt;&lt;br /&gt;
+                            Password: &lt;b title="Password"&gt;admin123%&lt;/b&gt;&lt;br /&gt;
+                            &lt;a class="btn btn-link" href="#" id="admin-login"&gt;Login as Admin&lt;/a&gt;&lt;br /&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="panel panel-default"&gt;
+                        &lt;div class="panel-heading"&gt;
+                            &lt;span&gt;^UserDesc^Standard user account^UserDesc^&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class="panel-body"&gt;
+                            User Name: &lt;b title="User Name"&gt;user&lt;/b&gt;&lt;br /&gt;
+                            Password: &lt;b title="Password"&gt;user123%&lt;/b&gt;&lt;br /&gt;
+                            &lt;a class="btn btn-link" href="#" id="user-login"&gt;Login as User&lt;/a&gt;&lt;br /&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;hr /&gt;
+            &lt;!-- Example row of columns --&gt;
+            &lt;div class="row"&gt;
+                &lt;div class="col-sm-4"&gt;
+                    &lt;h2&gt;Heading&lt;/h2&gt;
+                    &lt;p&gt;Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. &lt;/p&gt;
+                    &lt;p&gt;&lt;a class="btn btn-default" href="#" role="button"&gt;View details &amp;raquo;&lt;/a&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="col-sm-4"&gt;
+                    &lt;h2&gt;Heading&lt;/h2&gt;
+                    &lt;p&gt;Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. &lt;/p&gt;
+                    &lt;p&gt;&lt;a class="btn btn-default" href="#" role="button"&gt;View details &amp;raquo;&lt;/a&gt;&lt;/p&gt;
+                &lt;/div&gt;
+                &lt;div class="col-sm-4"&gt;
+                    &lt;h2&gt;Heading&lt;/h2&gt;
+                    &lt;p&gt;Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.&lt;/p&gt;
+                    &lt;p&gt;&lt;a class="btn btn-default" href="#" role="button"&gt;View details &amp;raquo;&lt;/a&gt;&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;hr/&gt;
+        &lt;!-- /container --&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+
+    &lt;script type="text/javascript"&gt;
+        (function () {
+            var resources = Web.MembershipResources.Messages;
+
+            function performLogin(username, password) {
+
+                var userNameElem = $('#login-user-name'),
+                    passwordElem = $('#login-password');
+
+                if (!username)
+                    username = userNameElem.val();
+                if (!password)
+                    password = passwordElem.val();
+
+                if (!username)
+                    $app.alert(resources.BlankUserName, function () {
+                        userNameElem.focus();
+                    });
+                else if (!password)
+                    $app.alert(resources.BlankPassword, function () {
+                        passwordElem.focus();
+                    });
+                else
+                    $app.login(username, password, true,
+                        function () {
+                            setTimeout(function() {
+                              $app._navigated = true;
+                              var returnUrl = window.location.href.match(/\?ReturnUrl=(.+)$/);
+                              window.location.replace(returnUrl &amp;&amp; decodeURIComponent(returnUrl[1]) || __baseUrl);
+                            });
+                        },
+                        function () {
+                            $app.alert(resources.InvalidUserNameAndPassword, function () {
+                                userNameElem.focus();
+                            });
+                        });
+                return false;
+            }
+
+            $(document)
+                .on('click', '#login-button', function () {
+                    performLogin();
+                })
+                .on('click', '#admin-login', function () {
+                    performLogin('admin', 'admin123%');
+                })
+                .on('click', '#user-login', function () {
+                    performLogin('user', 'user123%');
+                })
+                .on('keydown', 'input', function (event) {
+                    if (event.which == 13) {
+                        event.preventDefault();
+                        performLogin();
+                        return false;
+                    }
+                });
+        })();
+    &lt;/script&gt;
+
+            </body>
+    </userControl>
+  </userControls>
+</application>

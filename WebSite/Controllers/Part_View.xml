@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="Part_View" conflictDetection="overwriteChanges" label="Part View" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"Part_View"."Part_ID" "Part_ID"
+	,"Part_View"."Company_ID" "Company_ID"
+	,"Part_View"."Part_Job_Category_ID" "Part_Job_Category_ID"
+	,"Part_View"."Part_Brand_ID" "Part_Brand_ID"
+	,"Part_View"."Part_Manufacturer_ID" "Part_Manufacturer_ID"
+	,"Part_View"."Part_Number" "Part_Number"
+	,"Part_View"."Description" "Description"
+	,"Part_View"."Cost" "Cost"
+	,"Part_View"."List_Price" "List_Price"
+	,"Part_View"."Selling_Price" "Selling_Price"
+	,"Part_View"."Pricing_Matrix" "Pricing_Matrix"
+	,"Part_View"."Part_Supplier_ID" "Part_Supplier_ID"
+	,"Part_View"."Taxable" "Taxable"
+	,"Part_View"."Part_Note" "Part_Note"
+	,"Part_View"."Old_Part_ID" "Old_Part_ID"
+from "dbo"."Part_View" "Part_View"
+]]></text>
+    </command>
+    <command id="Part_IDIdentityCommand" type="Text" event="Inserted">
+      <text><![CDATA[select @@identity]]></text>
+      <output>
+        <fieldOutput fieldName="Part_ID" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="Part_ID" type="Int32" allowNulls="false" label="Part#" readOnly="true" showInSummary="true" />
+    <field name="Company_ID" type="Int32" label="Company#" showInSummary="true" />
+    <field name="Part_Job_Category_ID" type="Int32" label="PartJobCategory#" showInSummary="true" />
+    <field name="Part_Brand_ID" type="Int32" label="PartBrand#" showInSummary="true" />
+    <field name="Part_Manufacturer_ID" type="Int32" label="PartManufacturer#" showInSummary="true" />
+    <field name="Part_Number" type="String" label="Part Number" length="50" />
+    <field name="Description" type="String" label="Description" length="255" />
+    <field name="Cost" type="Decimal" label="Cost" />
+    <field name="List_Price" type="Decimal" label="List Price" />
+    <field name="Selling_Price" type="Decimal" label="Selling Price" />
+    <field name="Pricing_Matrix" type="Boolean" label="Pricing Matrix" />
+    <field name="Part_Supplier_ID" type="Int32" label="PartSupplier#" />
+    <field name="Taxable" type="Boolean" label="Taxable" />
+    <field name="Part_Note" type="String" label="Part Note" length="500" />
+    <field name="Old_Part_ID" type="Int32" label="OldPart#" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Part View">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="Part_ID" columns="15" hidden="true" />
+        <dataField fieldName="Company_ID" columns="15" hidden="true" />
+        <dataField fieldName="Part_Job_Category_ID" columns="15" />
+        <dataField fieldName="Part_Brand_ID" columns="15" />
+        <dataField fieldName="Part_Manufacturer_ID" columns="15" />
+        <dataField fieldName="Part_Number" columns="50" />
+        <dataField fieldName="Description" />
+        <dataField fieldName="Cost" dataFormatString="c" columns="15" />
+        <dataField fieldName="List_Price" dataFormatString="c" columns="15" />
+        <dataField fieldName="Selling_Price" dataFormatString="c" columns="15" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Part View">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Part View" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Part_ID" columns="15" />
+            <dataField fieldName="Company_ID" columns="15" />
+            <dataField fieldName="Part_Job_Category_ID" columns="15" />
+            <dataField fieldName="Part_Brand_ID" columns="15" />
+            <dataField fieldName="Part_Manufacturer_ID" columns="15" />
+            <dataField fieldName="Part_Number" columns="50" />
+            <dataField fieldName="Description" />
+            <dataField fieldName="Cost" dataFormatString="c" columns="15" />
+            <dataField fieldName="List_Price" dataFormatString="c" columns="15" />
+            <dataField fieldName="Selling_Price" dataFormatString="c" columns="15" />
+            <dataField fieldName="Pricing_Matrix" />
+            <dataField fieldName="Part_Supplier_ID" columns="15" />
+            <dataField fieldName="Taxable" />
+            <dataField fieldName="Part_Note" />
+            <dataField fieldName="Old_Part_ID" columns="15" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Part View">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Company_ID" columns="15" />
+            <dataField fieldName="Part_Job_Category_ID" columns="15" />
+            <dataField fieldName="Part_Brand_ID" columns="15" />
+            <dataField fieldName="Part_Manufacturer_ID" columns="15" />
+            <dataField fieldName="Part_Number" columns="50" />
+            <dataField fieldName="Description" />
+            <dataField fieldName="Cost" dataFormatString="c" columns="15" />
+            <dataField fieldName="List_Price" dataFormatString="c" columns="15" />
+            <dataField fieldName="Selling_Price" dataFormatString="c" columns="15" />
+            <dataField fieldName="Pricing_Matrix" />
+            <dataField fieldName="Part_Supplier_ID" columns="15" />
+            <dataField fieldName="Taxable" />
+            <dataField fieldName="Part_Note" />
+            <dataField fieldName="Old_Part_ID" columns="15" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Delete" />
+      <action id="a6" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenKeySelected="true" whenClientScript="this.hasDetails()" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

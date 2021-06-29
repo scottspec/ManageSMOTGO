@@ -1,0 +1,352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="Invoice_History_View" conflictDetection="overwriteChanges" label="Invoice History View" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"Invoice_History_View"."Invoice_ID" "Invoice_ID"
+	,"Invoice_History_View"."Completion_Date" "Completion_Date"
+	,"Invoice_History_View"."Invoice_Number" "Invoice_Number"
+	,"Invoice_History_View"."Location_ID" "Location_ID"
+	,"Invoice_History_View"."Vehicle_ID" "Vehicle_ID"
+	,"Invoice_History_View"."Odometer" "Odometer"
+	,"Invoice_History_View"."Mileage_Correction" "Mileage_Correction"
+	,"Invoice_History_View"."Actual_Mileage" "Actual_Mileage"
+	,"Invoice_History_View"."Invoice_Note" "Invoice_Note"
+	,"Invoice_History_View"."Customer_ID" "Customer_ID"
+	,"Invoice_History_View"."Company_ID" "Company_ID"
+	,"Invoice_History_View"."First_Name" "First_Name"
+	,"Invoice_History_View"."Last_Name" "Last_Name"
+	,"Invoice_History_View"."Other_First_Name" "Other_First_Name"
+	,"Invoice_History_View"."Other_Last_Name" "Other_Last_Name"
+	,"Invoice_History_View"."Address_Line_1" "Address_Line_1"
+	,"Invoice_History_View"."Address_Line_2" "Address_Line_2"
+	,"Invoice_History_View"."City" "City"
+	,"Invoice_History_View"."State" "State"
+	,"Invoice_History_View"."Zip_Code" "Zip_Code"
+	,"Invoice_History_View"."Province" "Province"
+	,"Invoice_History_View"."Customer_Pricing_Matrix_ID" "Customer_Pricing_Matrix_ID"
+	,"Invoice_History_View"."Customer_Note" "Customer_Note"
+	,"Invoice_History_View"."Tag" "Tag"
+	,"Invoice_History_View"."Vin" "Vin"
+	,"Invoice_History_View"."Vehicle_Pricing_Matrix_ID" "Vehicle_Pricing_Matrix_ID"
+	,"Invoice_History_View"."Model_Year_ID" "Model_Year_ID"
+	,"Invoice_History_View"."Model_Year_Name" "Model_Year_Name"
+	,"Invoice_History_View"."Make_ID" "Make_ID"
+	,"Invoice_History_View"."Make_Name" "Make_Name"
+	,"Invoice_History_View"."Model_ID" "Model_ID"
+	,"Invoice_History_View"."Model_Name" "Model_Name"
+	,"Invoice_History_View"."Engine_ID" "Engine_ID"
+	,"Invoice_History_View"."Engine_Name" "Engine_Name"
+	,"Invoice_History_View"."Transmission_ID" "Transmission_ID"
+	,"Invoice_History_View"."Transmission_Name" "Transmission_Name"
+	,"Invoice_History_View"."Body_Style_ID" "Body_Style_ID"
+	,"Invoice_History_View"."Body_Style_Name" "Body_Style_Name"
+	,"Invoice_History_View"."Trim_Level_ID" "Trim_Level_ID"
+	,"Invoice_History_View"."Trim_Level_Name" "Trim_Level_Name"
+	,"Invoice_History_View"."Taxable_Labor" "Taxable_Labor"
+	,"Invoice_History_View"."Taxable_Part" "Taxable_Part"
+	,"Invoice_History_View"."NonTaxable_Labor" "NonTaxable_Labor"
+	,"Invoice_History_View"."NonTaxable_Part" "NonTaxable_Part"
+	,"Invoice_History_View"."Labor_Total" "Labor_Total"
+	,"Invoice_History_View"."Part_Total" "Part_Total"
+	,"Invoice_History_View"."Sub_Total" "Sub_Total"
+	,"Invoice_History_View"."Total" "Total"
+	,"Invoice_History_View"."Start_Date" "Start_Date"
+	,"Invoice_History_View"."Promised_Date" "Promised_Date"
+	,"Invoice_History_View"."Picked_Up_Date" "Picked_Up_Date"
+	,"Invoice_History_View"."Processed_Date" "Processed_Date"
+	,"Invoice_History_View"."Part_Total_Taxable" "Part_Total_Taxable"
+	,"Invoice_History_View"."Part_Total_Non_Taxable" "Part_Total_Non_Taxable"
+	,"Invoice_History_View"."Labor_Total_Non_Taxable" "Labor_Total_Non_Taxable"
+	,"Invoice_History_View"."Labor_Total_Taxable" "Labor_Total_Taxable"
+	,"Invoice_History_View"."Part_Tax" "Part_Tax"
+	,"Invoice_History_View"."Labor_Tax" "Labor_Tax"
+	,"Invoice_History_View"."Invoice_Status_ID" "Invoice_Status_ID"
+	,"Invoice_History_View"."OldID" "OldID"
+	,"Invoice_History_View"."Estimate_Note" "Estimate_Note"
+	,"Invoice_History_View"."Part_Cost_Total" "Part_Cost_Total"
+	,"Invoice_History_View"."Labor_Cost_Total" "Labor_Cost_Total"
+from "dbo"."Invoice_History_View" "Invoice_History_View"
+]]></text>
+    </command>
+  </commands>
+  <fields>
+    <field name="Invoice_ID" type="Int32" allowNulls="false" label="Invoice#" showInSummary="true" />
+    <field name="Completion_Date" type="DateTime" label="Completion Date" showInSummary="true" />
+    <field name="Invoice_Number" type="String" label="Invoice Number" length="50" showInSummary="true" />
+    <field name="Location_ID" type="Int32" label="Location#" showInSummary="true" />
+    <field name="Vehicle_ID" type="Int32" label="Vehicle#" showInSummary="true" />
+    <field name="Odometer" type="Int32" label="Odometer" />
+    <field name="Mileage_Correction" type="Int32" label="Mileage Correction" />
+    <field name="Actual_Mileage" type="Int32" label="Actual Mileage" />
+    <field name="Invoice_Note" type="String" label="Invoice Note" length="1999" />
+    <field name="Customer_ID" type="Int32" label="Customer#" />
+    <field name="Company_ID" type="Int32" label="Company#" />
+    <field name="First_Name" type="String" label="First Name" length="50" />
+    <field name="Last_Name" type="String" label="Last Name" length="50" />
+    <field name="Other_First_Name" type="String" label="Other First Name" length="50" />
+    <field name="Other_Last_Name" type="String" label="Other Last Name" length="50" />
+    <field name="Address_Line_1" type="String" label="Address Line1" length="50" />
+    <field name="Address_Line_2" type="String" label="Address Line2" length="50" />
+    <field name="City" type="String" label="City" length="50" />
+    <field name="State" type="String" label="State" length="50" />
+    <field name="Zip_Code" type="String" label="Zip Code" length="50" />
+    <field name="Province" type="String" label="Province" length="50" />
+    <field name="Customer_Pricing_Matrix_ID" type="Int32" label="CustomerPricingMatrix#" />
+    <field name="Customer_Note" type="String" label="Customer Note" length="1999" />
+    <field name="Tag" type="String" allowNulls="false" label="Tag" length="50" />
+    <field name="Vin" type="String" label="Vin" length="50" />
+    <field name="Vehicle_Pricing_Matrix_ID" type="Int32" label="VehiclePricingMatrix#" />
+    <field name="Model_Year_ID" type="Int32" label="ModelYear#" />
+    <field name="Model_Year_Name" type="String" label="Model Year Name" length="4" />
+    <field name="Make_ID" type="Int32" label="Make#" />
+    <field name="Make_Name" type="String" label="Make Name" length="50" />
+    <field name="Model_ID" type="Int32" label="Model#" />
+    <field name="Model_Name" type="String" label="Model Name" length="50" />
+    <field name="Engine_ID" type="Int32" label="Engine#" />
+    <field name="Engine_Name" type="String" label="Engine Name" length="75" />
+    <field name="Transmission_ID" type="Int32" label="Transmission#" />
+    <field name="Transmission_Name" type="String" label="Transmission Name" length="100" />
+    <field name="Body_Style_ID" type="Int32" label="BodyStyle#" />
+    <field name="Body_Style_Name" type="String" label="Body Style Name" length="50" />
+    <field name="Trim_Level_ID" type="Int32" label="TrimLevel#" />
+    <field name="Trim_Level_Name" type="String" label="Trim Level Name" length="50" />
+    <field name="Taxable_Labor" type="Decimal" label="Taxable Labor" />
+    <field name="Taxable_Part" type="Decimal" label="Taxable Part" />
+    <field name="NonTaxable_Labor" type="Decimal" label="Non Taxable Labor" />
+    <field name="NonTaxable_Part" type="Decimal" label="Non Taxable Part" />
+    <field name="Labor_Total" type="Decimal" label="Labor Total" />
+    <field name="Part_Total" type="Decimal" label="Part Total" />
+    <field name="Sub_Total" type="Decimal" label="Sub Total" />
+    <field name="Total" type="Decimal" label="Total" />
+    <field name="Start_Date" type="DateTime" label="Start Date" />
+    <field name="Promised_Date" type="DateTime" label="Promised Date" />
+    <field name="Picked_Up_Date" type="DateTime" label="Picked Up Date" />
+    <field name="Processed_Date" type="DateTime" label="Processed Date" />
+    <field name="Part_Total_Taxable" type="Decimal" label="Part Total Taxable" />
+    <field name="Part_Total_Non_Taxable" type="Decimal" label="Part Total Non Taxable" />
+    <field name="Labor_Total_Non_Taxable" type="Decimal" label="Labor Total Non Taxable" />
+    <field name="Labor_Total_Taxable" type="Decimal" label="Labor Total Taxable" />
+    <field name="Part_Tax" type="Decimal" label="Part Tax" />
+    <field name="Labor_Tax" type="Decimal" label="Labor Tax" />
+    <field name="Invoice_Status_ID" type="Int32" label="InvoiceStatus#" />
+    <field name="OldID" type="Int32" label="Old#" />
+    <field name="Estimate_Note" type="String" label="Estimate Note" length="1999" />
+    <field name="Part_Cost_Total" type="Decimal" label="Part Cost Total" />
+    <field name="Labor_Cost_Total" type="Decimal" label="Labor Cost Total" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Invoice History View">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="Invoice_ID" columns="15" hidden="true" />
+        <dataField fieldName="Completion_Date" columns="10" />
+        <dataField fieldName="Invoice_Number" columns="50" />
+        <dataField fieldName="Odometer" columns="15" />
+        <dataField fieldName="Mileage_Correction" columns="15" />
+        <dataField fieldName="Actual_Mileage" columns="15" />
+        <dataField fieldName="Invoice_Note" />
+        <dataField fieldName="Customer_ID" columns="15" hidden="true" />
+        <dataField fieldName="Company_ID" hidden="true" />
+        <dataField fieldName="Total" aggregate="Sum" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Invoice History View">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Invoice History View" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Invoice_ID" columns="15" />
+            <dataField fieldName="Completion_Date" columns="10" />
+            <dataField fieldName="Invoice_Number" columns="50" />
+            <dataField fieldName="Location_ID" columns="15" />
+            <dataField fieldName="Vehicle_ID" columns="15" />
+            <dataField fieldName="Odometer" columns="15" />
+            <dataField fieldName="Mileage_Correction" columns="15" />
+            <dataField fieldName="Actual_Mileage" columns="15" />
+            <dataField fieldName="Invoice_Note" />
+            <dataField fieldName="Customer_ID" columns="15" />
+            <dataField fieldName="Company_ID" columns="15" />
+            <dataField fieldName="First_Name" columns="50" />
+            <dataField fieldName="Last_Name" columns="50" />
+            <dataField fieldName="Other_First_Name" columns="50" />
+            <dataField fieldName="Other_Last_Name" columns="50" />
+            <dataField fieldName="Address_Line_1" columns="50" />
+            <dataField fieldName="Address_Line_2" columns="50" />
+            <dataField fieldName="City" columns="50" />
+            <dataField fieldName="State" columns="50" />
+            <dataField fieldName="Zip_Code" columns="50" />
+            <dataField fieldName="Province" columns="50" />
+            <dataField fieldName="Customer_Pricing_Matrix_ID" columns="15" />
+            <dataField fieldName="Customer_Note" />
+            <dataField fieldName="Tag" columns="50" />
+            <dataField fieldName="Vin" columns="50" />
+            <dataField fieldName="Vehicle_Pricing_Matrix_ID" columns="15" />
+            <dataField fieldName="Model_Year_ID" columns="15" />
+            <dataField fieldName="Model_Year_Name" columns="4" />
+            <dataField fieldName="Make_ID" columns="15" />
+            <dataField fieldName="Make_Name" columns="50" />
+            <dataField fieldName="Model_ID" columns="15" />
+            <dataField fieldName="Model_Name" columns="50" />
+            <dataField fieldName="Engine_ID" columns="15" />
+            <dataField fieldName="Engine_Name" />
+            <dataField fieldName="Transmission_ID" columns="15" />
+            <dataField fieldName="Transmission_Name" />
+            <dataField fieldName="Body_Style_ID" columns="15" />
+            <dataField fieldName="Body_Style_Name" columns="50" />
+            <dataField fieldName="Trim_Level_ID" columns="15" />
+            <dataField fieldName="Trim_Level_Name" columns="50" />
+            <dataField fieldName="Taxable_Labor" dataFormatString="c" columns="15" />
+            <dataField fieldName="Taxable_Part" dataFormatString="c" columns="15" />
+            <dataField fieldName="NonTaxable_Labor" dataFormatString="c" columns="15" />
+            <dataField fieldName="NonTaxable_Part" dataFormatString="c" columns="15" />
+            <dataField fieldName="Labor_Total" dataFormatString="c" columns="15" />
+            <dataField fieldName="Part_Total" dataFormatString="c" columns="15" />
+            <dataField fieldName="Sub_Total" dataFormatString="c" columns="15" />
+            <dataField fieldName="Total" dataFormatString="c" columns="15" />
+            <dataField fieldName="Start_Date" columns="10" />
+            <dataField fieldName="Promised_Date" columns="10" />
+            <dataField fieldName="Picked_Up_Date" columns="10" />
+            <dataField fieldName="Processed_Date" columns="10" />
+            <dataField fieldName="Part_Total_Taxable" dataFormatString="c" columns="15" />
+            <dataField fieldName="Part_Total_Non_Taxable" dataFormatString="c" columns="15" />
+            <dataField fieldName="Labor_Total_Non_Taxable" dataFormatString="c" columns="15" />
+            <dataField fieldName="Labor_Total_Taxable" dataFormatString="c" columns="15" />
+            <dataField fieldName="Part_Tax" dataFormatString="c" columns="15" />
+            <dataField fieldName="Labor_Tax" dataFormatString="c" columns="15" />
+            <dataField fieldName="Invoice_Status_ID" columns="15" />
+            <dataField fieldName="OldID" columns="15" />
+            <dataField fieldName="Estimate_Note" />
+            <dataField fieldName="Part_Cost_Total" dataFormatString="c" columns="15" />
+            <dataField fieldName="Labor_Cost_Total" dataFormatString="c" columns="15" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Invoice History View">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Invoice_ID" columns="15" />
+            <dataField fieldName="Completion_Date" columns="10" />
+            <dataField fieldName="Invoice_Number" columns="50" />
+            <dataField fieldName="Location_ID" columns="15" />
+            <dataField fieldName="Vehicle_ID" columns="15" />
+            <dataField fieldName="Odometer" columns="15" />
+            <dataField fieldName="Mileage_Correction" columns="15" />
+            <dataField fieldName="Actual_Mileage" columns="15" />
+            <dataField fieldName="Invoice_Note" />
+            <dataField fieldName="Customer_ID" columns="15" />
+            <dataField fieldName="Company_ID" columns="15" />
+            <dataField fieldName="First_Name" columns="50" />
+            <dataField fieldName="Last_Name" columns="50" />
+            <dataField fieldName="Other_First_Name" columns="50" />
+            <dataField fieldName="Other_Last_Name" columns="50" />
+            <dataField fieldName="Address_Line_1" columns="50" />
+            <dataField fieldName="Address_Line_2" columns="50" />
+            <dataField fieldName="City" columns="50" />
+            <dataField fieldName="State" columns="50" />
+            <dataField fieldName="Zip_Code" columns="50" />
+            <dataField fieldName="Province" columns="50" />
+            <dataField fieldName="Customer_Pricing_Matrix_ID" columns="15" />
+            <dataField fieldName="Customer_Note" />
+            <dataField fieldName="Tag" columns="50" />
+            <dataField fieldName="Vin" columns="50" />
+            <dataField fieldName="Vehicle_Pricing_Matrix_ID" columns="15" />
+            <dataField fieldName="Model_Year_ID" columns="15" />
+            <dataField fieldName="Model_Year_Name" columns="4" />
+            <dataField fieldName="Make_ID" columns="15" />
+            <dataField fieldName="Make_Name" columns="50" />
+            <dataField fieldName="Model_ID" columns="15" />
+            <dataField fieldName="Model_Name" columns="50" />
+            <dataField fieldName="Engine_ID" columns="15" />
+            <dataField fieldName="Engine_Name" />
+            <dataField fieldName="Transmission_ID" columns="15" />
+            <dataField fieldName="Transmission_Name" />
+            <dataField fieldName="Body_Style_ID" columns="15" />
+            <dataField fieldName="Body_Style_Name" columns="50" />
+            <dataField fieldName="Trim_Level_ID" columns="15" />
+            <dataField fieldName="Trim_Level_Name" columns="50" />
+            <dataField fieldName="Taxable_Labor" dataFormatString="c" columns="15" />
+            <dataField fieldName="Taxable_Part" dataFormatString="c" columns="15" />
+            <dataField fieldName="NonTaxable_Labor" dataFormatString="c" columns="15" />
+            <dataField fieldName="NonTaxable_Part" dataFormatString="c" columns="15" />
+            <dataField fieldName="Labor_Total" dataFormatString="c" columns="15" />
+            <dataField fieldName="Part_Total" dataFormatString="c" columns="15" />
+            <dataField fieldName="Sub_Total" dataFormatString="c" columns="15" />
+            <dataField fieldName="Total" dataFormatString="c" columns="15" />
+            <dataField fieldName="Start_Date" columns="10" />
+            <dataField fieldName="Promised_Date" columns="10" />
+            <dataField fieldName="Picked_Up_Date" columns="10" />
+            <dataField fieldName="Processed_Date" columns="10" />
+            <dataField fieldName="Part_Total_Taxable" dataFormatString="c" columns="15" />
+            <dataField fieldName="Part_Total_Non_Taxable" dataFormatString="c" columns="15" />
+            <dataField fieldName="Labor_Total_Non_Taxable" dataFormatString="c" columns="15" />
+            <dataField fieldName="Labor_Total_Taxable" dataFormatString="c" columns="15" />
+            <dataField fieldName="Part_Tax" dataFormatString="c" columns="15" />
+            <dataField fieldName="Labor_Tax" dataFormatString="c" columns="15" />
+            <dataField fieldName="Invoice_Status_ID" columns="15" />
+            <dataField fieldName="OldID" columns="15" />
+            <dataField fieldName="Estimate_Note" />
+            <dataField fieldName="Part_Cost_Total" dataFormatString="c" columns="15" />
+            <dataField fieldName="Labor_Cost_Total" dataFormatString="c" columns="15" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Delete" />
+      <action id="a6" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenKeySelected="true" whenClientScript="this.hasDetails()" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

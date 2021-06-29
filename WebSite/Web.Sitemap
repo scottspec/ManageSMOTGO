@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
+  <siteMapNode title="^SiteHome^Home^SiteHome^" description="" url="~/Default.aspx">
+    <siteMapNode title="Home" description="^HomeDesc^Application home page^HomeDesc^" url="~/Pages/Home.aspx" roles="Owner" cssClass="Wide" />
+    <siteMapNode title="Email Address Status" description="View Email Address Status" url="~/Pages/Email_Address_Status.aspx">
+      <siteMapNode title="Email Message To Status" description="View Email Message To Status" url="~/Pages/Email_Message_To_Status.aspx" />
+    </siteMapNode>
+    <siteMapNode title="Email Message" description="View Email Message" url="~/Pages/Email_Message.aspx" />
+    <siteMapNode title="Company Status" description="View Company Status" url="~/Pages/Company_Status.aspx" />
+    <siteMapNode title="^MembershipPath^Membership^MembershipPath^" description="^MembershipDesc^User and role manager^MembershipDesc^" url="~/Pages/Membership.aspx" roles="Owner" />
+    <siteMapNode title="Personal Edition Tracking" description="" url="~/Pages/PersonalEditionTracking.aspx" roles="Owner" />
+  </siteMapNode>
+</siteMap>

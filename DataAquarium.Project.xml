@@ -1,0 +1,57 @@
+<!-- 
+  This file is provided to store the settings for your Data Aquarium project. 
+  You can safely delete this file if no further code generation is planned.
+-->
+<project compatibility="20111118" subscriptionLevel="Unlimited" codeDomProvider="VisualBasic" targetFramework="4.5" name="ManageSMOTGO" prettyName="Manage SMOTGO" type="Web Site Factory" userInterface="Desktop" pageImplementation="aspx" sourceControl="git" displayName="" group="" appGenVersion="" xmlns="urn:schemas-codeontime-com:data-aquarium-project">
+  <connectionString hostDatabaseSharing="false" sessionStateMode="None">Data Source=localhost;Initial Catalog=ManageSMOTGO;Integrated Security=True;</connectionString>
+  <providerName>System.Data.SqlClient</providerName>
+  <namespace>MyCompany</namespace>
+  <webServer run="true" port="17261" preview="Browser" client="">
+    <webConfig> Delete:  /configuration/system.web/authentication
+
+      &lt;nothing/&gt;
+
+      InsertAfter:  /configuration/system.web/compilation
+      &lt;authentication mode="Forms"&gt;
+      &lt;forms loginUrl="~/Login.aspx" timeout="200" /&gt;
+      &lt;/authentication&gt;
+
+      InsertAfter:  /configuration/system.web/webServices
+      &lt;sessionState timeout="130" /&gt;
+
+      AppendChild:  /configuration/connectionStrings
+      &lt;add name="Shopmanager" connectionString="Data Source=localhost;Initial Catalog=Shopmanager;Integrated Security=True;" providerName="System.Data.SqlClient"/&gt;
+    </webConfig>
+  </webServer>
+  <features pageHeader="" copyright="" annotations="false" annotationsPath="" newColumn="true" floating="false" maxGridFields="10" multiSelect="false" batchEdit="false" advancedSearch="false" advancedLookup="false" relationshipExplorer="false" enablePermalinks="false" enableHistory="false" enableTransactions="false" showModalForms="true" tabViewSelection="9" useSaveAndNew="false">
+    <navigation detectUnderscoreSeparatedSchema="" />
+    <grid actionColumn="false" />
+    <ease urlHashing="false">
+      <auditing></auditing>
+    </ease>
+    <packageProperties></packageProperties>
+    <framework scriptOnly="true" />
+    <touch desktopDisplayDensity="Condensed" mobileDisplayDensity="Auto" transitions="" sidebar="Landscape" labelsInForm="AlignedLeft" buttonShapes="true" labelsInList="DisplayedBelow" initialListMode="SeeAll" promoteActions="true" mapApiIdentifier="" smartDates="true" menu="toolbar" mapApiIdentifierMobile="" />
+    <cms searchEngine="" analysisEngine="" analysisOnDataPages="false" />
+    <smtp deliveryMethod="Network" deliveryFormat="" from="info@smotgo.com" clientDomain="" targetName="" host="smotgo.com" port="587" defaultCredentials="false" enableSsl="false" username="info@smotgo.com" password="ThisNew123" />
+    <addons OfflineSync="" ContentMaker="" />
+  </features>
+  <host path="" url="" />
+  <databaseObjectFilter generate="ControllersAndPages"></databaseObjectFilter>
+  <bll discoveryDepth="3" labelFormatExpression="" generate="true" selectMethod="Select" selectSingleMethod="SelectSingle" insertMethod="Insert" updateMethod="Update" deleteMethod="Delete" generateSharedBusinessRules="true" includeViews="true" tabViewSelection="0" normalizeModelNames="true">
+    <fieldMap></fieldMap>
+    <keys></keys>
+    <fieldsToIgnore></fieldsToIgnore>
+    <fieldsToHide></fieldsToHide>
+    <customLabels></customLabels>
+  </bll>
+  <reports enabled="false" version="" />
+  <membership enabled="true" providerName="System.Data.SqlClient" connectionString="Data Source=localhost;Initial Catalog=ShopManager;Integrated Security=True;" windowsAuthentication="false" customSecurity="false" dedicatedLogin="true" displayRememberMe="true" rememberMeSet="false" displaySignUp="true" displayPasswordRecovery="true" displayMyAccount="true" displayHelp="true" idleUserDetectionTimeout="120" tabViewSelection="3" validationKey="5F01F2366665EE518F3EA7138EA6ED9A9D8D8D1E236CB2E6F802F1624780485DF9739CD00C8940D08C199EDE39E7D88BC5E0A23B32977E4A35C8852DFC112D75" activeDirectory="false">
+    <config></config>
+    <adConfig></adConfig>
+  </membership>
+  <globalization uiCulture="en-US" culture="en-US" enableClientBasedCulture="false" supportedCultures="en-US,en-US; " googleTranslateApiKey="" />
+  <layout name="Classic" menuStyle="MultiLevel" />
+  <theme name="Aquarium" />
+  <native windows="false" android="false" ios="false" osx="false" />
+</project>

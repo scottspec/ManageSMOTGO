@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="Job_View" conflictDetection="overwriteChanges" label="Job View" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"Job_View"."Job_ID" "Job_ID"
+	,"Job_View"."Invoice_ID" "Invoice_ID"
+	,"Job_View"."Vehicle_ID" "Vehicle_ID"
+	,"Job_View"."Issue" "Issue"
+	,"Job_View"."Solution" "Solution"
+	,"Job_View"."Job_Saved_ID" "Job_Saved_ID"
+	,"Job_View"."Company_ID" "Company_ID"
+	,"Job_View"."Created_On" "Created_On"
+from "dbo"."Job_View" "Job_View"
+]]></text>
+    </command>
+    <command id="Job_IDIdentityCommand" type="Text" event="Inserted">
+      <text><![CDATA[select @@identity]]></text>
+      <output>
+        <fieldOutput fieldName="Job_ID" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="Job_ID" type="Int32" allowNulls="false" label="Job#" readOnly="true" showInSummary="true" />
+    <field name="Invoice_ID" type="Int32" label="Invoice#" showInSummary="true" />
+    <field name="Vehicle_ID" type="Int32" label="Vehicle#" showInSummary="true" />
+    <field name="Issue" type="String" label="Issue" length="255" showInSummary="true" />
+    <field name="Solution" type="String" allowQBE="false" allowSorting="false" label="Solution" length="8000" showInSummary="true" />
+    <field name="Job_Saved_ID" type="Int32" label="JobSaved#" />
+    <field name="Company_ID" type="Int32" label="Company#" />
+    <field name="Created_On" type="DateTime" label="Created On" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Job View" filter="Invoice_ID is not null">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="Job_ID" columns="15" hidden="true" />
+        <dataField fieldName="Invoice_ID" columns="15" hidden="true" />
+        <dataField fieldName="Vehicle_ID" columns="15" hidden="true" />
+        <dataField fieldName="Issue" />
+        <dataField fieldName="Solution" rows="5" />
+        <dataField fieldName="Job_Saved_ID" columns="15" />
+        <dataField fieldName="Company_ID" columns="15" hidden="true" />
+        <dataField fieldName="Created_On" columns="10" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Job View">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Job View" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Job_ID" columns="15" />
+            <dataField fieldName="Invoice_ID" columns="15" />
+            <dataField fieldName="Vehicle_ID" columns="15" />
+            <dataField fieldName="Issue" />
+            <dataField fieldName="Solution" rows="5" />
+            <dataField fieldName="Job_Saved_ID" columns="15" />
+            <dataField fieldName="Company_ID" columns="15" />
+            <dataField fieldName="Created_On" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Job View">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Invoice_ID" columns="15" />
+            <dataField fieldName="Vehicle_ID" columns="15" />
+            <dataField fieldName="Issue" />
+            <dataField fieldName="Solution" rows="5" />
+            <dataField fieldName="Job_Saved_ID" columns="15" />
+            <dataField fieldName="Company_ID" columns="15" />
+            <dataField fieldName="Created_On" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Delete" />
+      <action id="a6" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenKeySelected="true" whenClientScript="this.hasDetails()" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

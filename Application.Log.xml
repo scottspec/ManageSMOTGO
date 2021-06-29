@@ -1,0 +1,1197 @@
+﻿<?xml version="1.0" encoding="utf-8"?><log xmlns:aquarium="urn:schemas-codeontime-com:data-aquarium" xmlns:app="urn:schemas-codeontime-com:data-aquarium-application" xmlns:a="urn:schemas-codeontime-com:data-aquarium" xmlns="urn:schemas-codeontime-com:xml-builder"><c y="NodeSet" t="2013-04-13T21:29:56">
+  <page name="Home" />
+  <container id="container1" />
+  <delete />
+</c><c y="NodeSet" t="2013-04-13T21:30:08">
+  <page name="Home" />
+  <move>
+    <page name="Login_Last_Date" />
+    <container id="container1" />
+  </move>
+</c><c y="NodeSet" t="2013-04-13T21:30:17">
+  <page name="Home" />
+  <move>
+    <page name="Invoice_View" />
+    <container id="container1" />
+  </move>
+</c><c y="NodeSet" t="2013-04-13T21:30:26">
+  <page name="Home" />
+  <container id="c101" />
+  <move>
+    <page name="Customer_View" />
+    <container id="container1" />
+  </move>
+</c><c y="NodeSet" t="2013-04-13T21:30:46">
+  <page name="Home" />
+  <container id="c102" />
+  <move>
+    <page name="Part_View" />
+    <dataView id="view1" />
+  </move>
+</c><c y="NodeSet" t="2013-04-13T21:30:52">
+  <page name="Home" />
+  <container id="c102" />
+  <move>
+    <page name="Vehicle_View" />
+    <dataView id="view1" />
+  </move>
+</c><c y="NodeSet" t="2013-04-13T21:31:05">
+  <page name="Login_Last_Date" />
+  <delete />
+</c><c y="NodeSet" t="2013-04-13T21:31:16">
+  <page name="Home" />
+  <container id="c101" />
+  <move>
+    <page name="Home" />
+    <dataView id="view3" />
+  </move>
+</c><c y="NodeSet" t="2013-04-13T21:31:16">
+  <page name="Home" />
+  <container id="c101" />
+  <move>
+    <page name="Home" />
+    <dataView id="view4" />
+  </move>
+</c><c y="NodeSet" t="2013-04-13T21:31:16">
+  <page name="Home" />
+  <container id="c101" />
+  <move>
+    <page name="Home" />
+    <dataView id="view5" />
+  </move>
+</c><c y="NodeSet" t="2013-04-13T21:31:24">
+  <page name="Customer_View" />
+  <delete />
+</c><c y="NodeSet" t="2013-04-13T21:31:41">
+  <page name="AllReports" />
+  <delete />
+</c><c y="NodeSet" t="2013-04-13T21:32:46">
+  <page name="Home" />
+  <dataView id="view2" />
+  <update>
+    <Activator />
+    <FilterSource>view1</FilterSource>
+    <FilterFields>Company_ID</FilterFields>
+  </update>
+</c><c y="NodeSet" t="2013-04-13T21:33:06">
+  <page name="Home" />
+  <dataView id="view3" />
+  <update>
+    <Activator />
+    <FilterSource>view1</FilterSource>
+    <FilterFields>Company_ID</FilterFields>
+  </update>
+</c><c y="NodeSet" t="2013-04-13T21:33:22">
+  <page name="Home" />
+  <dataView id="view4" />
+  <update>
+    <Activator />
+    <FilterSource>view1</FilterSource>
+    <FilterFields>Company_ID</FilterFields>
+  </update>
+</c><c y="NodeSet" t="2013-04-13T21:33:33">
+  <page name="Home" />
+  <dataView id="view5" />
+  <update>
+    <Activator />
+    <FilterSource>view1</FilterSource>
+    <FilterFields>Customer_ID</FilterFields>
+  </update>
+</c><c y="NodeSet" t="2013-04-13T21:33:40">
+  <page name="Home" />
+  <container id="c102" />
+  <delete />
+</c><c y="NodeSet" t="2013-04-13T21:43:41">
+  <page name="Home" />
+  <dataView id="view5" />
+  <update>
+    <FilterFields>Company_ID</FilterFields>
+  </update>
+</c><c y="NodeSet" t="2013-04-14T07:48:09">
+  <page name="Home" />
+  <update>
+    <Roles>Owner</Roles>
+  </update>
+</c><c y="NodeSet" t="2013-04-14T07:48:16">
+  <page name="Membership" />
+  <update>
+    <Roles>Owner</Roles>
+  </update>
+</c><c y="NodeSet" t="2013-04-14T07:50:33">
+  <userControl name="Welcome" />
+  <update>
+    <Body />
+  </update>
+</c><c y="NodeSet" t="2013-04-15T17:02:28">
+  <page name="Home" />
+  <dataView id="view2" />
+  <move>
+    <page name="Job_View" />
+    <dataView id="view1" />
+  </move>
+</c><c y="NodeSet" t="2013-04-15T17:02:48">
+  <page name="Home" />
+  <dataView id="view6" />
+  <update>
+    <Activator />
+    <FilterSource>view2</FilterSource>
+    <FilterFields>Company_ID</FilterFields>
+  </update>
+</c><c y="NodeSet" t="2013-04-15T17:02:57">
+  <page name="Home" />
+  <dataView id="view6" />
+  <update>
+    <FilterFields>Invoice_ID</FilterFields>
+  </update>
+</c><c y="NodeSet" t="2013-04-15T17:03:04">
+  <page name="Home" />
+  <dataView id="view5" />
+  <move>
+    <page name="Invoice_History_View" />
+    <dataView id="view1" />
+  </move>
+</c><c y="NodeSet" t="2013-04-15T17:03:28">
+  <page name="p130415050203" />
+  <delete />
+</c><c y="NodeSet" t="2013-04-15T17:03:57">
+  <page name="Home" />
+  <dataView id="view7" />
+  <update>
+    <Activator />
+    <FilterSource>view1</FilterSource>
+    <FilterFields>Company_ID</FilterFields>
+  </update>
+</c><c y="NodeSet" t="2013-04-15T17:20:27">
+  <page name="Home" />
+  <dataView id="view2" />
+  <update>
+    <Activator>Tab</Activator>
+    <Text>Invoices</Text>
+  </update>
+</c><c y="NodeSet" t="2013-04-15T17:21:04">
+  <page name="Home" />
+  <dataView id="view2" />
+  <move>
+    <page name="Home" />
+    <dataView id="view3" />
+  </move>
+</c><c y="NodeSet" t="2013-04-15T17:21:13">
+  <page name="Home" />
+  <dataView id="view3" />
+  <update>
+    <Activator>Tab</Activator>
+    <Text>Customers</Text>
+  </update>
+</c><c y="NodeSet" t="2013-04-15T17:21:16">
+  <page name="Home" />
+  <dataView id="view3" />
+  <move>
+    <page name="Home" />
+    <dataView id="view4" />
+  </move>
+</c><c y="NodeSet" t="2013-04-15T17:21:28">
+  <page name="Home" />
+  <dataView id="view4" />
+  <update>
+    <Activator>Tab</Activator>
+    <Text>Parts</Text>
+  </update>
+</c><c y="NodeSet" t="2013-04-15T17:21:33">
+  <page name="Home" />
+  <dataView id="view3" />
+  <move>
+    <page name="Home" />
+    <dataView id="view5" />
+  </move>
+</c><c y="NodeSet" t="2013-04-15T17:21:41">
+  <page name="Home" />
+  <dataView id="view5" />
+  <update>
+    <Activator>Tab</Activator>
+    <Text>Vehicles</Text>
+  </update>
+</c><c y="NodeSet" t="2013-04-15T17:22:05">
+  <page name="Home" />
+  <insert type="container">
+    <Flow>NewRow</Flow>
+  </insert>
+</c><c y="NodeSet" t="2013-04-15T17:22:07">
+  <page name="Home" />
+  <container id="c102" />
+  <move>
+    <page name="Home" />
+    <dataView id="view6" />
+  </move>
+</c><c y="NodeSet" t="2013-04-15T17:22:10">
+  <page name="Home" />
+  <container id="c102" />
+  <move>
+    <page name="Home" />
+    <dataView id="view7" />
+  </move>
+</c><c y="NodeSet" t="2013-04-15T17:22:20">
+  <page name="Home" />
+  <dataView id="view6" />
+  <update>
+    <Text>Jobs</Text>
+  </update>
+</c><c y="NodeSet" t="2013-04-15T17:22:28">
+  <page name="Home" />
+  <dataView id="view7" />
+  <update>
+    <Text>History</Text>
+  </update>
+</c><c y="NodeSet" t="2013-04-15T20:23:46">
+  <userControl name="Login" />
+  <update>
+    <Generate>Always</Generate>
+    <Body>                  
+&lt;%@ Register Src="Welcome.ascx" TagName="Welcome" TagPrefix="uc1" %&gt;
+&lt;div class="SettingsPanel"&gt;
+    &lt;asp:Login ID="Login1" runat="server" TitleText="" Style="border-collapse: separate;"
+        CreateUserText="Sign Up Now" CreateUserUrl="javascript:Web.Membership._instance.signUp();"
+        PasswordRecoveryText="Forgot Your Password?" PasswordRecoveryUrl="javascript:Web.Membership._instance.passwordRecovery();"&gt;
+    &lt;/asp:Login&gt;
+    &lt;div style="width: 300px; margin: 20px -8px;"&gt;
+        &lt;uc1:Welcome ID="Welcome1" runat="server" /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+                </Body>
+  </update>
+</c><c y="NodeSet" t="2013-04-15T20:27:03">
+  <userControl name="Login" />
+  <update>
+    <Generate>FirstTimeOnly</Generate>
+  </update>
+</c><c y="NodeSet" t="2013-04-19T10:08:24">
+  <page name="p130419100735" />
+  <delete />
+</c><c y="NodeSet" t="2013-04-19T13:11:30">
+  <userControl name="Welcome" />
+  <delete />
+</c><c y="NodeSet" t="2013-04-29T18:06:08">
+  <page name="Home" />
+  <container id="container1" />
+  <move>
+    <page name="Log_On_Summary" />
+    <dataView id="view1" />
+  </move>
+</c><c y="NodeSet" t="2013-04-29T18:06:13">
+  <page name="Log_On_Summary" />
+  <delete />
+</c><c y="NodeSet" t="2013-04-29T18:06:29">
+  <page name="p130429060205" />
+  <delete />
+</c><c y="NodeSet" t="2013-04-29T18:06:42">
+  <page name="Home" />
+  <dataView id="view1" />
+  <update>
+    <Activator>Tab</Activator>
+    <Text>Last Log On</Text>
+  </update>
+</c><c y="NodeSet" t="2013-04-29T18:06:51">
+  <page name="Home" />
+  <dataView id="view8" />
+  <update>
+    <Activator>Tab</Activator>
+    <Text>Log On Summary</Text>
+  </update>
+</c><c y="NodeSet" t="2013-05-10T16:40:58">
+  <page name="Home" />
+  <container id="container1" />
+  <move>
+    <page name="LogInCount" />
+    <dataView id="view1" />
+  </move>
+</c><c y="NodeSet" t="2013-05-10T16:41:16">
+  <page name="Home" />
+  <dataView id="view9" />
+  <update>
+    <Activator>Tab</Activator>
+    <Text>Log On Count</Text>
+  </update>
+</c><c y="NodeSet" t="2013-05-10T16:41:24">
+  <page name="Home" />
+  <container id="container1" />
+  <move>
+    <page name="Demo_Summary" />
+    <dataView id="view1" />
+  </move>
+</c><c y="NodeSet" t="2013-05-10T16:41:35">
+  <page name="Home" />
+  <dataView id="view10" />
+  <update>
+    <Activator>Tab</Activator>
+    <Text>Demo Summary</Text>
+  </update>
+</c><c y="NodeSet" t="2013-05-10T17:24:46">
+  <page name="p130510044043" />
+  <delete />
+</c><c y="NodeSet" t="2013-05-16T06:20:38">
+  <page name="Home" />
+  <dataView id="view6" />
+  <update>
+    <AutoHide>Self</AutoHide>
+  </update>
+</c><c y="NodeSet" t="2013-05-30T12:39:51">
+  <page name="p130530122454" />
+  <delete />
+</c><c y="NodeSet" t="2013-06-14T20:44:23">
+  <page name="Home" />
+  <container id="container1" />
+  <move>
+    <page name="Page_View" />
+    <dataView id="view1" />
+  </move>
+</c><c y="NodeSet" t="2013-06-14T20:44:52">
+  <page name="Home" />
+  <dataView id="view11" />
+  <update>
+    <Activator>Tab</Activator>
+    <Text>Page Views</Text>
+  </update>
+</c><c y="NodeSet" t="2013-07-21T07:35:32">
+  <page name="Home" />
+  <container id="container1" />
+  <move>
+    <page name="User_Summary_View" />
+    <dataView id="view1" />
+  </move>
+</c><c y="NodeSet" t="2013-07-21T07:35:36">
+  <page name="Home" />
+  <dataView id="view1" />
+  <before>
+    <page name="Home" />
+    <dataView id="view12" />
+  </before>
+</c><c y="NodeSet" t="2013-07-21T07:35:43">
+  <page name="p130614083613" />
+  <delete />
+</c><c y="NodeSet" t="2013-07-21T07:35:53">
+  <page name="p130721073258" />
+  <delete />
+</c><c y="NodeSet" t="2013-07-21T07:44:21">
+  <page name="Home" />
+  <dataView id="view1" />
+  <delete />
+</c><c y="NodeSet" t="2013-07-21T07:44:23">
+  <page name="Home" />
+  <dataView id="view8" />
+  <delete />
+</c><c y="NodeSet" t="2013-07-21T07:44:41">
+  <page name="Home" />
+  <dataView id="view12" />
+  <rename>view1</rename>
+</c><c y="NodeSet" t="2013-07-21T07:45:03">
+  <page name="Home" />
+  <dataView id="view1" />
+  <update>
+    <Activator>Tab</Activator>
+    <Text>User Summary</Text>
+  </update>
+</c><c y="NodeSet" t="2013-07-21T07:58:55">
+  <page name="Home" />
+  <container id="container1" />
+  <move>
+    <page name="User_Summary_Daily_View" />
+    <dataView id="view1" />
+  </move>
+</c><c y="NodeSet" t="2013-07-21T07:59:11">
+  <page name="Home" />
+  <dataView id="view1" />
+  <before>
+    <page name="Home" />
+    <dataView id="view8" />
+  </before>
+</c><c y="NodeSet" t="2013-07-21T08:00:10">
+  <page name="Home" />
+  <dataView id="view1" />
+  <rename>view21</rename>
+</c><c y="NodeSet" t="2013-07-21T08:00:15">
+  <page name="Home" />
+  <dataView id="view8" />
+  <rename>view1</rename>
+</c><c y="NodeSet" t="2013-07-21T08:00:31">
+  <page name="Home" />
+  <dataView id="view2" />
+  <update>
+    <FilterSource>view1</FilterSource>
+  </update>
+</c><c y="NodeSet" t="2013-07-21T08:00:38">
+  <page name="Home" />
+  <dataView id="view3" />
+  <update>
+    <FilterSource>view1</FilterSource>
+  </update>
+</c><c y="NodeSet" t="2013-07-21T08:00:46">
+  <page name="Home" />
+  <dataView id="view5" />
+  <update>
+    <FilterSource>view1</FilterSource>
+  </update>
+</c><c y="NodeSet" t="2013-07-21T08:00:52">
+  <page name="Home" />
+  <dataView id="view4" />
+  <update>
+    <FilterSource>view1</FilterSource>
+  </update>
+</c><c y="NodeSet" t="2013-07-21T08:01:08">
+  <page name="Home" />
+  <dataView id="view7" />
+  <update>
+    <FilterSource>view1</FilterSource>
+  </update>
+</c><c y="NodeSet" t="2013-07-21T08:01:25">
+  <page name="Home" />
+  <dataView id="view1" />
+  <update>
+    <Activator>Tab</Activator>
+    <Text>User Summary Daily</Text>
+  </update>
+</c><c y="NodeSet" t="2013-07-21T08:06:20">
+  <page name="p130721075713" />
+  <delete />
+</c><c y="NodeSet" t="2013-07-22T16:05:11">
+  <page name="Home" />
+  <update>
+    <Name>Manage</Name>
+    <Title>Manage</Title>
+  </update>
+</c><c y="NodeSet" t="2013-07-23T05:52:08">
+  <page name="Manage" />
+  <rename>Manage</rename>
+</c><c y="NodeSet" t="2013-07-24T16:48:25">
+  <page name="Manage" />
+  <container id="c101" />
+  <copy>
+    <page name="Log_In" />
+    <dataView id="view1" />
+  </copy>
+</c><c y="NodeSet" t="2013-07-24T16:48:41">
+  <page name="Manage" />
+  <dataView id="view8" />
+  <update>
+    <Activator>Tab</Activator>
+    <Text>Log In History</Text>
+  </update>
+</c><c y="NodeSet" t="2013-07-24T16:48:55">
+  <page name="Manage" />
+  <dataView id="view8" />
+  <update>
+    <FilterSource>view1</FilterSource>
+    <FilterFields>User_Name</FilterFields>
+  </update>
+</c><c y="NodeSet" t="2013-07-25T15:28:13">
+  <page name="p130724025948" />
+  <delete />
+</c><c y="NodeSet" t="2013-07-26T13:13:17">
+  <page name="Manage" />
+  <update>
+    <Name>Home</Name>
+  </update>
+</c><c y="NodeSet" t="2013-07-26T13:13:25">
+  <page name="Home" />
+  <rename>Home</rename>
+</c><c y="NodeSet" t="2013-08-13T17:36:58">
+  <userControls />
+  <insert type="userControl">
+    <Name>SelectedGridRefresh</Name>
+    <Prefix>uc</Prefix>
+    <Generate>FirstTimeOnly</Generate>
+  </insert>
+</c><c y="NodeSet" t="2013-08-13T17:37:00">
+  <page name="Home" />
+  <container id="container1" />
+  <insert type="control">
+    <UserControl>SelectedGridRefresh</UserControl>
+  </insert>
+</c><c y="NodeSet" t="2013-08-13T17:37:07">
+  <page name="Home" />
+  <dataView id="view1" />
+  <update>
+    <Tag>User Summary Daily</Tag>
+  </update>
+</c><c y="NodeSet" t="2013-08-13T17:37:14">
+  <page name="Home" />
+  <dataView id="view21" />
+  <update>
+    <Tag>User Summary</Tag>
+  </update>
+</c><c y="NodeSet" t="2013-08-13T17:37:19">
+  <page name="Home" />
+  <dataView id="view9" />
+  <update>
+    <Tag>Log On Count</Tag>
+  </update>
+</c><c y="NodeSet" t="2013-08-13T17:37:26">
+  <page name="Home" />
+  <dataView id="view10" />
+  <update>
+    <Tag>Demo Summary</Tag>
+  </update>
+</c><c y="NodeSet" t="2013-08-13T17:37:31">
+  <page name="Home" />
+  <dataView id="view11" />
+  <update>
+    <Tag>Page Views</Tag>
+  </update>
+</c><c y="NodeSet" t="2013-08-13T17:38:03">
+  <page name="Home" />
+  <dataView id="view2" />
+  <update>
+    <Tag>Invoices</Tag>
+  </update>
+</c><c y="NodeSet" t="2013-08-13T17:38:08">
+  <page name="Home" />
+  <dataView id="view3" />
+  <update>
+    <Tag>Customers</Tag>
+  </update>
+</c><c y="NodeSet" t="2013-08-13T17:38:13">
+  <page name="Home" />
+  <dataView id="view5" />
+  <update>
+    <Tag>Vehicles</Tag>
+  </update>
+</c><c y="NodeSet" t="2013-08-13T17:38:19">
+  <page name="Home" />
+  <dataView id="view4" />
+  <update>
+    <Tag>Parts</Tag>
+  </update>
+</c><c y="NodeSet" t="2013-08-13T17:38:25">
+  <page name="Home" />
+  <dataView id="view8" />
+  <update>
+    <Tag>Log In History</Tag>
+  </update>
+</c><c y="NodeSet" t="2013-08-13T17:38:32">
+  <page name="Home" />
+  <dataView id="view6" />
+  <update>
+    <Tag>Jobs</Tag>
+  </update>
+</c><c y="NodeSet" t="2013-08-13T17:38:38">
+  <page name="Home" />
+  <dataView id="view7" />
+  <update>
+    <Tag>History</Tag>
+  </update>
+</c><c y="NodeSet" t="2013-08-13T17:38:42">
+  <page name="Home" />
+  <dataView id="view7" />
+  <update>
+    <Activator>Tab</Activator>
+  </update>
+</c><c y="NodeSet" t="2013-08-13T17:38:47">
+  <page name="Home" />
+  <dataView id="view6" />
+  <update>
+    <Activator>Tab</Activator>
+  </update>
+</c><c y="NodeSet" t="2013-08-26T11:01:55">
+  <page name="Home" />
+  <dataView id="view6" />
+  <update>
+    <AutoHide>Nothing</AutoHide>
+  </update>
+</c><c y="NodeSet" t="2013-09-15T12:21:19">
+  <page name="Home" />
+  <container id="container1" />
+  <move>
+    <page name="Email_History" />
+    <dataView id="view1" />
+  </move>
+</c><c y="NodeSet" t="2013-09-15T12:21:36">
+  <page name="Home" />
+  <dataView id="view12" />
+  <update>
+    <Tag>Email History</Tag>
+    <Activator>Tab</Activator>
+    <Text>Email History</Text>
+  </update>
+</c><c y="NodeSet" t="2013-09-15T12:21:41">
+  <page name="p130915094720" />
+  <delete />
+</c><c y="NodeSet" t="2013-09-15T12:22:03">
+  <page name="p130915095724" />
+  <delete />
+</c><c y="NodeSet" t="2013-09-15T13:00:35">
+  <page name="Home" />
+  <container id="container1" />
+  <copy>
+    <page name="Home" />
+    <dataView id="view12" />
+  </copy>
+</c><c y="NodeSet" t="2013-09-15T13:01:02">
+  <page name="Home" />
+  <dataView id="view13" />
+  <update>
+    <Controller>Email_Sent</Controller>
+    <Tag>Email Sent</Tag>
+    <Text>Email Sent</Text>
+  </update>
+</c><c y="NodeSet" t="2013-09-16T10:05:31">
+  <page name="Home" />
+  <container id="container1" />
+  <copy>
+    <page name="Home" />
+    <dataView id="view13" />
+  </copy>
+</c><c y="NodeSet" t="2013-09-16T10:06:01">
+  <page name="Home" />
+  <dataView id="view14" />
+  <update>
+    <Controller>Contact_Form</Controller>
+    <Tag>Contact Form</Tag>
+    <Text>Contact Form</Text>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T10:20:38">
+  <page name="Home" />
+  <container id="c101" />
+  <insert type="dataView">
+    <Controller>Email_Address</Controller>
+    <View>grid1</View>
+    <ShowInSummary>false</ShowInSummary>
+    <ShowActionBar>true</ShowActionBar>
+    <ShowDescription>true</ShowDescription>
+    <ShowViewSelector>true</ShowViewSelector>
+    <ShowSearchBar>true</ShowSearchBar>
+    <ShowQuickFind>true</ShowQuickFind>
+    <SearchByFirstLetter>false</SearchByFirstLetter>
+    <ShowRowNumber>false</ShowRowNumber>
+    <ShowPageSize>true</ShowPageSize>
+    <ShowModalForms>false</ShowModalForms>
+    <SearchOnStart>false</SearchOnStart>
+    <ShowDetailsInListMode>true</ShowDetailsInListMode>
+    <AutoHighlightFirstRow>false</AutoHighlightFirstRow>
+    <AutoSelectFirstRow>false</AutoSelectFirstRow>
+  </insert>
+</c><c y="NodeSet" t="2013-10-08T10:23:08">
+  <page name="Home" />
+  <container id="c101" />
+  <copy>
+    <page name="Email_Address" />
+    <dataView id="view1" />
+  </copy>
+</c><c y="NodeSet" t="2013-10-08T10:23:27">
+  <page name="Home" />
+  <dataView id="view16" />
+  <update>
+    <FilterSource>view1</FilterSource>
+    <FilterFields>Company_ID</FilterFields>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T10:35:40">
+  <page name="Home" />
+  <dataView id="view16" />
+  <delete />
+</c><c y="NodeSet" t="2013-10-08T10:35:57">
+  <page name="p130916100348" />
+  <rename>Email</rename>
+</c><c y="NodeSet" t="2013-10-08T10:37:14">
+  <page name="Contact_Form" />
+  <delete />
+</c><c y="NodeSet" t="2013-10-08T10:37:39">
+  <page name="p130916100348" />
+  <move>
+    <page name="Email_Address" />
+    <container id="container1" />
+  </move>
+</c><c y="NodeSet" t="2013-10-08T10:37:52">
+  <page name="p130916100348" />
+  <dataView id="view1" />
+  <update>
+    <Controller>Email_Message</Controller>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T10:40:20">
+  <page name="p130916100348" />
+  <move>
+    <page name="Email_Address_Status" />
+    <container id="container1" />
+  </move>
+</c><c y="NodeSet" t="2013-10-08T10:40:45">
+  <page name="Home" />
+  <dataView id="view15" />
+  <update>
+    <Tag>Email Address</Tag>
+    <Activator>Tab</Activator>
+    <Text>Email Address</Text>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T10:41:00">
+  <page name="p130916100348" />
+  <container id="c101" />
+  <move>
+    <page name="Email_Address_Status" />
+    <dataView id="view2" />
+  </move>
+</c><c y="NodeSet" t="2013-10-08T10:41:08">
+  <page name="Email_Address" />
+  <delete />
+</c><c y="NodeSet" t="2013-10-08T10:41:12">
+  <page name="p131008102253" />
+  <delete />
+</c><c y="NodeSet" t="2013-10-08T10:41:46">
+  <page name="p131008101917" />
+  <rename>Email Field Replacement</rename>
+</c><c y="NodeSet" t="2013-10-08T10:42:01">
+  <page name="p131008101917" />
+  <update>
+    <Name>EmailFieldReplacement</Name>
+    <Title>Email Field Replacement</Title>
+    <CustomStyle>Wide</CustomStyle>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T10:42:17">
+  <page name="p130916100348" />
+  <update>
+    <Name>Email</Name>
+    <Title>Email</Title>
+    <CustomStyle>Wide</CustomStyle>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T10:42:23">
+  <page name="EmailFieldReplacement" />
+  <copy>
+    <page name="Email" />
+    <container id="c101" />
+  </copy>
+</c><c y="NodeSet" t="2013-10-08T10:42:29">
+  <page name="EmailFieldReplacement" />
+  <dataView id="view3" />
+  <delete />
+</c><c y="NodeSet" t="2013-10-08T10:42:40">
+  <page name="EmailFieldReplacement" />
+  <dataView id="view2" />
+  <update>
+    <Controller>Email_Replacement_Field</Controller>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T10:43:02">
+  <page name="Email" />
+  <dataView id="view2" />
+  <update>
+    <Controller>Email_Message_Temp</Controller>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T10:44:18">
+  <page name="Email" />
+  <dataView id="view3" />
+  <update>
+    <Controller>Email_Message_Sent</Controller>
+    <Tag>Email Sent</Tag>
+    <Text>Email Sent</Text>
+    <FilterFields />
+  </update>
+</c><c y="NodeSet" t="2013-10-08T10:44:31">
+  <page name="Email" />
+  <dataView id="view2" />
+  <update>
+    <Tag>Email Temp</Tag>
+    <Activator>Tab</Activator>
+    <Text>Email Temp</Text>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T11:32:46">
+  <page name="EmailFieldReplacement" />
+  <rename>Email Maintenance</rename>
+</c><c y="NodeSet" t="2013-10-08T11:34:29">
+  <page name="EmailFieldReplacement" />
+  <update>
+    <Name>EmailMaintenance</Name>
+    <Title>Email Maintenance</Title>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T11:34:40">
+  <page name="EmailMaintenance" />
+  <container id="c101" />
+  <copy>
+    <page name="EmailMaintenance" />
+    <dataView id="view2" />
+  </copy>
+</c><c y="NodeSet" t="2013-10-08T11:34:42">
+  <page name="EmailMaintenance" />
+  <dataView id="view1" />
+  <move>
+    <page name="EmailMaintenance" />
+    <dataView id="view2" />
+  </move>
+</c><c y="NodeSet" t="2013-10-08T11:38:01">
+  <page name="EmailMaintenance" />
+  <dataView id="view1" />
+  <update>
+    <Controller>Email_Template</Controller>
+    <View />
+    <Tag>Email Template</Tag>
+    <Activator>Tab</Activator>
+    <Text>Email Template</Text>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T11:38:16">
+  <page name="EmailMaintenance" />
+  <dataView id="view2" />
+  <update>
+    <Tag>Field Replacements</Tag>
+    <Activator>Tab</Activator>
+    <Text>Field Replacements</Text>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T11:40:08">
+  <page name="Email" />
+  <dataView id="view2" />
+  <update>
+    <FilterSource>view1</FilterSource>
+    <FilterFields>Email_Message_ID</FilterFields>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T11:40:22">
+  <page name="Email" />
+  <dataView id="view3" />
+  <update>
+    <FilterSource>view1</FilterSource>
+    <FilterFields>Email_Message_ID</FilterFields>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T11:59:18">
+  <page name="p131008115720" />
+  <delete />
+</c><c y="NodeSet" t="2013-10-08T13:11:12">
+  <page name="EmailMaintenance" />
+  <dataView id="view1" />
+  <delete />
+</c><c y="NodeSet" t="2013-10-08T13:11:18">
+  <page name="Email" />
+  <container id="container1" />
+  <move>
+    <page name="EmailMaintenance" />
+    <dataView id="view2" />
+  </move>
+</c><c y="NodeSet" t="2013-10-08T13:11:24">
+  <page name="EmailMaintenance" />
+  <delete />
+</c><c y="NodeSet" t="2013-10-08T13:13:22">
+  <page name="Email" />
+  <dataView id="view1" />
+  <update>
+    <Tag>Email Message</Tag>
+    <Activator>Tab</Activator>
+    <Text>Email Message</Text>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T13:17:55">
+  <page name="Email" />
+  <dataView id="view1" />
+  <update>
+    <ShowModalForms>false</ShowModalForms>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T14:21:09">
+  <page name="Email" />
+  <dataView id="view3" />
+  <update>
+    <AutoHide>Nothing</AutoHide>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T14:22:48">
+  <page name="Email" />
+  <dataView id="view3" />
+  <update>
+    <ShowModalForms>false</ShowModalForms>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T14:28:16">
+  <page name="Email" />
+  <dataView id="view2" />
+  <update>
+    <MultiSelect>true</MultiSelect>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T14:28:46">
+  <page name="Email" />
+  <dataView id="view3" />
+  <update>
+    <PageSize />
+  </update>
+</c><c y="NodeSet" t="2013-10-08T14:34:43">
+  <page name="Email" />
+  <container id="container1" />
+  <copy>
+    <page name="Email" />
+    <dataView id="view4" />
+  </copy>
+</c><c y="NodeSet" t="2013-10-08T14:34:45">
+  <page name="Email" />
+  <container id="container1" />
+  <copy>
+    <page name="Email" />
+    <dataView id="view4" />
+  </copy>
+</c><c y="NodeSet" t="2013-10-08T14:35:09">
+  <page name="Email" />
+  <dataView id="view5" />
+  <update>
+    <Tag>Email Addresses</Tag>
+    <Text>Email Addresses</Text>
+    <ShowModalForms>true</ShowModalForms>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T14:35:17">
+  <page name="Email" />
+  <dataView id="view5" />
+  <update>
+    <Controller>Email_Address</Controller>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T14:35:48">
+  <page name="Email" />
+  <dataView id="view6" />
+  <update>
+    <Controller>Email_Address_Status</Controller>
+    <Tag>Email Addresses Status</Tag>
+    <Text>Email Addresses Status</Text>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T14:35:58">
+  <page name="Email" />
+  <container id="container1" />
+  <insert type="control">
+    <UserControl>SelectedGridRefresh</UserControl>
+  </insert>
+</c><c y="NodeSet" t="2013-10-08T16:53:05">
+  <page name="Email" />
+  <container id="c101" />
+  <move>
+    <page name="Company_View" />
+    <dataView id="view1" />
+  </move>
+</c><c y="NodeSet" t="2013-10-08T16:53:21">
+  <page name="Email" />
+  <dataView id="view7" />
+  <update>
+    <FilterSource>view5</FilterSource>
+    <FilterFields>Company_ID</FilterFields>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T16:53:24">
+  <page name="p131008045256" />
+  <delete />
+</c><c y="NodeSet" t="2013-10-08T17:18:57">
+  <page name="Email" />
+  <dataView id="view7" />
+  <update>
+    <Tag>Company Info</Tag>
+    <Activator>Tab</Activator>
+    <Text>Company Info</Text>
+  </update>
+</c><c y="NodeSet" t="2013-10-08T20:06:41">
+  <page name="p131008080341" />
+  <delete />
+</c><c y="NodeSet" t="2013-11-08T14:16:36">
+  <page name="Home" />
+  <dataView id="view1" />
+  <update>
+    <Controller>Company_Status</Controller>
+    <Tag>Summary</Tag>
+  </update>
+</c><c y="NodeSet" t="2013-11-08T14:18:15">
+  <page name="Home" />
+  <dataView id="view21" />
+  <delete />
+</c><c y="NodeSet" t="2013-11-08T16:18:45">
+  <page name="p131108021544" />
+  <delete />
+</c><c y="NodeSet" t="2013-11-08T17:28:09">
+  <page name="Home" />
+  <dataView id="view8" />
+  <update>
+    <AutoHighlightFirstRow>true</AutoHighlightFirstRow>
+    <FilterFields>Company_ID</FilterFields>
+  </update>
+</c><c y="NodeSet" t="2013-11-27T17:29:16">
+  <page name="Home" />
+  <dataView id="view15" />
+  <update>
+    <FilterSource>view1</FilterSource>
+    <FilterFields>Company_ID</FilterFields>
+  </update>
+</c><c y="NodeSet" t="2013-12-03T10:24:15">
+  <page name="Ad_Analysis" />
+  <update>
+    <Name>AdAnalysis</Name>
+  </update>
+</c><c y="NodeSet" t="2013-12-03T10:24:22">
+  <page name="Email" />
+  <before>
+    <page name="AdAnalysis" />
+  </before>
+</c><c y="NodeSet" t="2013-12-03T10:24:27">
+  <page name="AdAnalysis" />
+  <before>
+    <page name="Email" />
+  </before>
+</c><c y="NodeSet" t="2013-12-03T10:24:31">
+  <page name="p131203102258" />
+  <delete />
+</c><c y="NodeSet" t="2013-12-03T10:36:44">
+  <page name="AdAnalysis" />
+  <update>
+    <CustomStyle>Wide</CustomStyle>
+  </update>
+</c><c y="NodeSet" t="2013-12-27T10:36:28">
+  <page name="Home" />
+  <container id="c101" />
+  <move>
+    <page name="Company_User" />
+    <dataView id="view1" />
+  </move>
+</c><c y="NodeSet" t="2013-12-27T10:36:43">
+  <page name="Home" />
+  <dataView id="view16" />
+  <update>
+    <FilterSource>view1</FilterSource>
+    <FilterFields>Company_ID</FilterFields>
+  </update>
+</c><c y="NodeSet" t="2013-12-27T10:37:15">
+  <page name="p131227103607" />
+  <delete />
+</c><c y="NodeSet" t="2013-12-27T10:47:21">
+  <page name="Home" />
+  <dataView id="view16" />
+  <update>
+    <Activator>Tab</Activator>
+    <Text>Users</Text>
+  </update>
+</c><c y="NodeSet" t="2014-03-31T09:20:24">
+  <page name="AdAnalysis" />
+  <before>
+    <page name="Quickbooks_QBXML_Template" />
+  </before>
+</c><c y="NodeSet" t="2014-03-31T09:20:27">
+  <page name="Quickbooks_QBXML_Template" />
+  <before>
+    <page name="AdAnalysis" />
+  </before>
+</c><c y="NodeSet" t="2014-03-31T09:20:33">
+  <page name="p140331091955" />
+  <delete />
+</c><c y="NodeSet" t="2014-07-05T11:42:10">
+  <page name="Quickbooks_QBXML_Template" />
+  <delete />
+</c><c y="NodeSet" t="2014-07-05T11:45:14">
+  <page name="AdAnalysis" />
+  <delete />
+</c><c y="NodeSet" t="2015-01-12T10:53:20">
+  <page name="Home" />
+  <dataView id="view9" />
+  <update>
+    <RefreshInterval>600</RefreshInterval>
+  </update>
+</c><c y="NodeSet" t="2015-11-13T10:22:24">
+  <page name="Home" />
+  <container id="container1" />
+  <insert type="dataView">
+    <Controller>Company_Status</Controller>
+    <View>available_Grid</View>
+    <Activator>Tab</Activator>
+    <Text>Available</Text>
+    <ShowInSummary>false</ShowInSummary>
+    <ShowActionBar>true</ShowActionBar>
+    <ShowDescription>true</ShowDescription>
+    <ShowViewSelector>true</ShowViewSelector>
+    <ShowSearchBar>true</ShowSearchBar>
+    <ShowQuickFind>true</ShowQuickFind>
+    <SearchByFirstLetter>false</SearchByFirstLetter>
+    <ShowRowNumber>false</ShowRowNumber>
+    <ShowPageSize>true</ShowPageSize>
+    <ShowModalForms>false</ShowModalForms>
+    <SearchOnStart>false</SearchOnStart>
+    <ShowDetailsInListMode>true</ShowDetailsInListMode>
+    <AutoHighlightFirstRow>false</AutoHighlightFirstRow>
+    <AutoSelectFirstRow>false</AutoSelectFirstRow>
+  </insert>
+</c><c y="NodeSet" t="2015-11-13T10:24:17">
+  <page name="Home" />
+  <dataView id="view14" />
+  <delete />
+</c><c y="NodeSet" t="2015-11-13T10:57:05">
+  <page name="Home" />
+  <container id="c101" />
+  <copy>
+    <page name="Home" />
+    <dataView id="view8" />
+  </copy>
+</c><c y="NodeSet" t="2015-11-13T10:57:11">
+  <page name="Home" />
+  <dataView id="view8" />
+  <move>
+    <page name="Home" />
+    <dataView id="view14" />
+  </move>
+</c><c y="NodeSet" t="2015-11-13T10:57:25">
+  <page name="Home" />
+  <dataView id="view14" />
+  <update>
+    <FilterSource>view17</FilterSource>
+  </update>
+</c><c y="NodeSet" t="2018-01-06T16:54:38">
+  <pages />
+  <insert type="page">
+    <Name>PostSmotgoPE</Name>
+    <Generate>Always</Generate>
+    <UseExtenders>false</UseExtenders>
+    <Title>Post Smotgo PE</Title>
+    <Roles>*</Roles>
+  </insert>
+</c><c y="NodeSet" t="2018-01-06T16:54:45">
+  <page name="PostSmotgoPE" />
+  <insert type="container">
+    <Flow>NewRow</Flow>
+  </insert>
+</c><c y="NodeSet" t="2018-01-06T16:55:06">
+  <userControls />
+  <insert type="userControl">
+    <Name>PostSmotgoPE</Name>
+    <Prefix>uc</Prefix>
+    <Generate>FirstTimeOnly</Generate>
+  </insert>
+</c><c y="NodeSet" t="2018-01-06T17:03:34">
+  <pages />
+  <insert type="page">
+    <Name>PersonalEditionTracking</Name>
+    <Generate>Always</Generate>
+    <UseExtenders>false</UseExtenders>
+    <Path>Personal Edition Tracking</Path>
+    <Title>Personal Edition Tracking</Title>
+    <Roles>*</Roles>
+  </insert>
+</c><c y="NodeSet" t="2018-01-06T17:03:38">
+  <page name="PersonalEditionTracking" />
+  <insert type="container">
+    <Flow>NewRow</Flow>
+  </insert>
+</c><c y="NodeSet" t="2018-01-06T17:03:58">
+  <page name="PersonalEditionTracking" />
+  <container id="c101" />
+  <insert type="dataView">
+    <Controller>SmotgoPETracking</Controller>
+    <ShowInSummary>false</ShowInSummary>
+    <MultiSelect>false</MultiSelect>
+    <ShowActionBar>true</ShowActionBar>
+    <ShowDescription>true</ShowDescription>
+    <ShowViewSelector>true</ShowViewSelector>
+    <ShowSearchBar>true</ShowSearchBar>
+    <ShowQuickFind>true</ShowQuickFind>
+    <SearchByFirstLetter>false</SearchByFirstLetter>
+    <ShowRowNumber>false</ShowRowNumber>
+    <ShowPager>Bottom</ShowPager>
+    <ShowPageSize>true</ShowPageSize>
+    <ShowModalForms>false</ShowModalForms>
+    <SearchOnStart>false</SearchOnStart>
+    <ShowDetailsInListMode>true</ShowDetailsInListMode>
+    <AutoHighlightFirstRow>false</AutoHighlightFirstRow>
+    <AutoSelectFirstRow>false</AutoSelectFirstRow>
+    <AutoHide>Nothing</AutoHide>
+  </insert>
+</c><c y="NodeSet" t="2018-01-06T17:10:09">
+  <page name="PostSmotgoPE" />
+  <update>
+    <Roles>?</Roles>
+  </update>
+</c><c y="NodeSet" t="2018-01-06T17:16:51">
+  <page name="Email" />
+  <update>
+    <UseExtenders>false</UseExtenders>
+    <Roles>Owner</Roles>
+  </update>
+</c><c y="NodeSet" t="2018-01-06T17:17:03">
+  <page name="PersonalEditionTracking" />
+  <update>
+    <Roles>Owner</Roles>
+  </update>
+</c><c y="NodeSet" t="2018-01-06T17:21:56">
+  <page name="PostSmotgoPE" />
+  <container id="c101" />
+  <insert type="control">
+    <UserControl>PostSmotgoPE</UserControl>
+  </insert>
+</c></log>

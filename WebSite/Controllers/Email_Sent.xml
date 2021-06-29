@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="Email_Sent" conflictDetection="overwriteChanges" label="Email Sent" connectionStringName="Shopmanager" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"Email_Sent"."Email_Sent_ID" "Email_Sent_ID"
+	,"Email_Sent"."Company_ID" "Company_ID"
+	,"Email_Sent"."Is_Deleted" "Is_Deleted"
+	,"Email_Sent"."Created_On" "Created_On"
+	,"Email_Sent"."Created_By" "Created_By"
+	,"Email_Sent"."To_Addresse" "To_Addresse"
+	,"Email_Sent"."To_Name" "To_Name"
+	,"Email_Sent"."From_Address" "From_Address"
+	,"Email_Sent"."From_Name" "From_Name"
+	,"Email_Sent"."Subject" "Subject"
+	,"Email_Sent"."Message" "Message"
+	,"Email_Sent"."Attached_Field_Name" "Attached_Field_Name"
+from "dbo"."Email_Sent" "Email_Sent"
+]]></text>
+    </command>
+    <command id="Email_Sent_IDIdentityCommand" type="Text" event="Inserted">
+      <text><![CDATA[select @@identity]]></text>
+      <output>
+        <fieldOutput fieldName="Email_Sent_ID" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="Email_Sent_ID" type="Int32" allowNulls="false" label="EmailSent#" readOnly="true" showInSummary="true" />
+    <field name="Company_ID" type="Int32" label="Company#" showInSummary="true" />
+    <field name="Is_Deleted" type="Boolean" label="Is Deleted" showInSummary="true" />
+    <field name="Created_On" type="DateTime" label="Created On" showInSummary="true" />
+    <field name="Created_By" type="String" label="Created By" length="255" showInSummary="true" />
+    <field name="To_Addresse" type="String" label="To Addresse" length="1000" />
+    <field name="To_Name" type="String" label="To Name" length="1000" />
+    <field name="From_Address" type="String" label="From Address" length="1000" />
+    <field name="From_Name" type="String" label="From Name" length="1000" />
+    <field name="Subject" type="String" label="Subject" length="1000" />
+    <field name="Message" type="String" allowQBE="false" allowSorting="false" label="Message" />
+    <field name="Attached_Field_Name" type="String" label="Attached Field Name" length="1000" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Email Sent" sortExpression="Created_On desc">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="Created_On" columns="10" />
+        <dataField fieldName="Created_By" />
+        <dataField fieldName="To_Addresse" />
+        <dataField fieldName="To_Name" />
+        <dataField fieldName="From_Address" />
+        <dataField fieldName="From_Name" />
+        <dataField fieldName="Subject" />
+        <dataField fieldName="Company_ID" columns="15" />
+        <dataField fieldName="Is_Deleted" hidden="true" />
+        <dataField fieldName="Email_Sent_ID" columns="15" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Email Sent">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Email Sent" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Email_Sent_ID" columns="15" />
+            <dataField fieldName="Company_ID" columns="15" />
+            <dataField fieldName="Is_Deleted" />
+            <dataField fieldName="Created_On" columns="10" />
+            <dataField fieldName="Created_By" />
+            <dataField fieldName="To_Addresse" />
+            <dataField fieldName="To_Name" />
+            <dataField fieldName="From_Address" />
+            <dataField fieldName="From_Name" />
+            <dataField fieldName="Subject" />
+            <dataField fieldName="Message" rows="5" />
+            <dataField fieldName="Attached_Field_Name" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Email Sent">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Company_ID" columns="15" />
+            <dataField fieldName="Is_Deleted" />
+            <dataField fieldName="Created_On" columns="10" />
+            <dataField fieldName="Created_By" />
+            <dataField fieldName="To_Addresse" />
+            <dataField fieldName="To_Name" />
+            <dataField fieldName="From_Address" />
+            <dataField fieldName="From_Name" />
+            <dataField fieldName="Subject" />
+            <dataField fieldName="Message" rows="5" />
+            <dataField fieldName="Attached_Field_Name" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Delete" />
+      <action id="a6" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenKeySelected="true" whenClientScript="this.hasDetails()" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

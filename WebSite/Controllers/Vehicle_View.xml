@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="Vehicle_View" conflictDetection="overwriteChanges" label="Vehicle View" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"Vehicle_View"."Vehicle_ID" "Vehicle_ID"
+	,"Vehicle_View"."Customer_ID" "Customer_ID"
+	,"Vehicle_View"."Tag" "Tag"
+	,"Vehicle_View"."Vin" "Vin"
+	,"Vehicle_View"."Mileage_Correction" "Mileage_Correction"
+	,"Vehicle_View"."Vehicle_Note" "Vehicle_Note"
+	,"Vehicle_View"."Pricing_Matrix_ID" "Pricing_Matrix_ID"
+	,"Vehicle_View"."Company_ID" "Company_ID"
+	,"Vehicle_View"."Model_Year_ID" "Model_Year_ID"
+	,"Vehicle_View"."Make_ID" "Make_ID"
+	,"Vehicle_View"."Model_ID" "Model_ID"
+	,"Vehicle_View"."Engine_ID" "Engine_ID"
+	,"Vehicle_View"."Transmission_ID" "Transmission_ID"
+	,"Vehicle_View"."Body_Style_ID" "Body_Style_ID"
+	,"Vehicle_View"."Trim_Level_ID" "Trim_Level_ID"
+	,"Vehicle_View"."Is_Deleted" "Is_Deleted"
+	,"Vehicle_View"."Old_Vehicle_ID" "Old_Vehicle_ID"
+	,"Vehicle_View"."Created_On" "Created_On"
+	,"Vehicle_View"."Modified_On" "Modified_On"
+from "dbo"."Vehicle_View" "Vehicle_View"
+]]></text>
+    </command>
+    <command id="Vehicle_IDIdentityCommand" type="Text" event="Inserted">
+      <text><![CDATA[select @@identity]]></text>
+      <output>
+        <fieldOutput fieldName="Vehicle_ID" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="Vehicle_ID" type="Int32" allowNulls="false" label="Vehicle#" readOnly="true" showInSummary="true" />
+    <field name="Customer_ID" type="Int32" allowNulls="false" label="Customer#" showInSummary="true" />
+    <field name="Tag" type="String" allowNulls="false" label="Tag" length="50" showInSummary="true" />
+    <field name="Vin" type="String" label="Vin" length="50" showInSummary="true" />
+    <field name="Mileage_Correction" type="Int32" label="Mileage Correction" showInSummary="true" />
+    <field name="Vehicle_Note" type="String" allowQBE="false" allowSorting="false" label="Vehicle Note" />
+    <field name="Pricing_Matrix_ID" type="Int32" label="PricingMatrix#" />
+    <field name="Company_ID" type="Int32" label="Company#" />
+    <field name="Model_Year_ID" type="Int32" label="ModelYear#" />
+    <field name="Make_ID" type="Int32" label="Make#" />
+    <field name="Model_ID" type="Int32" label="Model#" />
+    <field name="Engine_ID" type="Int32" label="Engine#" />
+    <field name="Transmission_ID" type="Int32" label="Transmission#" />
+    <field name="Body_Style_ID" type="Int32" label="BodyStyle#" />
+    <field name="Trim_Level_ID" type="Int32" label="TrimLevel#" />
+    <field name="Is_Deleted" type="Boolean" label="Is Deleted" />
+    <field name="Old_Vehicle_ID" type="Int32" label="OldVehicle#" />
+    <field name="Created_On" type="DateTime" label="Created On" />
+    <field name="Modified_On" type="DateTime" label="Modified On" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Vehicle View">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="Vehicle_ID" columns="15" hidden="true" />
+        <dataField fieldName="Customer_ID" columns="15" hidden="true" />
+        <dataField fieldName="Tag" columns="50" />
+        <dataField fieldName="Vin" columns="50" />
+        <dataField fieldName="Mileage_Correction" columns="15" />
+        <dataField fieldName="Vehicle_Note" rows="5" />
+        <dataField fieldName="Pricing_Matrix_ID" columns="15" />
+        <dataField fieldName="Company_ID" columns="15" />
+        <dataField fieldName="Model_Year_ID" columns="15" />
+        <dataField fieldName="Make_ID" columns="15" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Vehicle View">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Vehicle View" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Vehicle_ID" columns="15" />
+            <dataField fieldName="Customer_ID" columns="15" />
+            <dataField fieldName="Tag" columns="50" />
+            <dataField fieldName="Vin" columns="50" />
+            <dataField fieldName="Mileage_Correction" columns="15" />
+            <dataField fieldName="Vehicle_Note" rows="5" />
+            <dataField fieldName="Pricing_Matrix_ID" columns="15" />
+            <dataField fieldName="Company_ID" columns="15" />
+            <dataField fieldName="Model_Year_ID" columns="15" />
+            <dataField fieldName="Make_ID" columns="15" />
+            <dataField fieldName="Model_ID" columns="15" />
+            <dataField fieldName="Engine_ID" columns="15" />
+            <dataField fieldName="Transmission_ID" columns="15" />
+            <dataField fieldName="Body_Style_ID" columns="15" />
+            <dataField fieldName="Trim_Level_ID" columns="15" />
+            <dataField fieldName="Is_Deleted" />
+            <dataField fieldName="Old_Vehicle_ID" columns="15" />
+            <dataField fieldName="Created_On" columns="10" />
+            <dataField fieldName="Modified_On" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Vehicle View">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Customer_ID" columns="15" />
+            <dataField fieldName="Tag" columns="50" />
+            <dataField fieldName="Vin" columns="50" />
+            <dataField fieldName="Mileage_Correction" columns="15" />
+            <dataField fieldName="Vehicle_Note" rows="5" />
+            <dataField fieldName="Pricing_Matrix_ID" columns="15" />
+            <dataField fieldName="Company_ID" columns="15" />
+            <dataField fieldName="Model_Year_ID" columns="15" />
+            <dataField fieldName="Make_ID" columns="15" />
+            <dataField fieldName="Model_ID" columns="15" />
+            <dataField fieldName="Engine_ID" columns="15" />
+            <dataField fieldName="Transmission_ID" columns="15" />
+            <dataField fieldName="Body_Style_ID" columns="15" />
+            <dataField fieldName="Trim_Level_ID" columns="15" />
+            <dataField fieldName="Is_Deleted" />
+            <dataField fieldName="Old_Vehicle_ID" columns="15" />
+            <dataField fieldName="Created_On" columns="10" />
+            <dataField fieldName="Modified_On" columns="10" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Delete" />
+      <action id="a6" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenKeySelected="true" whenClientScript="this.hasDetails()" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

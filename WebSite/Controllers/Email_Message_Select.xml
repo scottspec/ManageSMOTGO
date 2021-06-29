@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="Email_Message_Select" conflictDetection="overwriteChanges" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <fields>
+    <field name="Email_Message_ID" type="Int32" allowNulls="false" label="Select Message" allowQBE="false" allowSorting="false" htmlEncode="false" hidden="false">
+      <items style="Lookup" dataController="Email_Message" dataView="grid1" dataTextField="Email_Message_Name" dataValueField="Email_Message_ID" />
+    </field>
+  </fields>
+  <views />
+</dataController>

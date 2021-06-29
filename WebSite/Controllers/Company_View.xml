@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="Company_View" conflictDetection="overwriteChanges" label="Company View" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"Company_View"."Company_ID" "Company_ID"
+	,"Company_View"."CompanyID" "CompanyID"
+	,"Company_View"."Name" "Name"
+	,"Company_View"."Address_Line_1" "Address_Line_1"
+	,"Company_View"."Address_Line_2" "Address_Line_2"
+	,"Company_View"."City" "City"
+	,"Company_View"."State" "State"
+	,"Company_View"."Zip_Code" "Zip_Code"
+	,"Company_View"."Federal_Tax_ID" "Federal_Tax_ID"
+	,"Company_View"."State_Tax_ID" "State_Tax_ID"
+	,"Company_View"."Sales_Tax_ID" "Sales_Tax_ID"
+	,"Company_View"."Web_Site" "Web_Site"
+	,"Company_View"."Email_Address" "Email_Address"
+	,"Company_View"."Phone_Number_1_Type" "Phone_Number_1_Type"
+	,"Company_View"."Phone_Number_1" "Phone_Number_1"
+	,"Company_View"."Phone_Number_2_Type" "Phone_Number_2_Type"
+	,"Company_View"."Phone_Number_2" "Phone_Number_2"
+	,"Company_View"."Phone_Number_3_Type" "Phone_Number_3_Type"
+	,"Company_View"."Phone_Number_3" "Phone_Number_3"
+	,"Company_View"."Fax_Number" "Fax_Number"
+	,"Company_View"."Agreed_To_Terms_By" "Agreed_To_Terms_By"
+	,"Company_View"."Agreed_To_Terms_On" "Agreed_To_Terms_On"
+	,"Company_View"."Note" "Note"
+	,"Company_View"."Invoice_Number" "Invoice_Number"
+	,"Company_View"."Order_Number" "Order_Number"
+	,"Company_View"."Return_Number" "Return_Number"
+	,"Company_View"."Appointment_Number" "Appointment_Number"
+	,"Company_View"."Estimate_Number" "Estimate_Number"
+	,"Company_View"."Tax_Rate_Parts" "Tax_Rate_Parts"
+	,"Company_View"."Tax_Rate_Labor" "Tax_Rate_Labor"
+	,"Company_View"."Logo" "Logo"
+	,"Company_View"."Is_Deleted" "Is_Deleted"
+	,"Company_View"."Pricing_Matrix_ID" "Pricing_Matrix_ID"
+	,"Company_View"."Process_Date" "Process_Date"
+	,"Company_View"."Full_Schedule_Hour" "Full_Schedule_Hour"
+	,"Company_View"."Service_Interval_Mile" "Service_Interval_Mile"
+	,"Company_View"."Service_Interval_Day" "Service_Interval_Day"
+	,"Company_View"."Ink_Saver" "Ink_Saver"
+from "dbo"."Company_View" "Company_View"
+]]></text>
+    </command>
+    <command id="Company_IDIdentityCommand" type="Text" event="Inserted">
+      <text><![CDATA[select @@identity]]></text>
+      <output>
+        <fieldOutput fieldName="Company_ID" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="Company_ID" type="Int32" allowNulls="false" label="Company#" readOnly="true" showInSummary="true" />
+    <field name="CompanyID" type="Int32" label="Company#" showInSummary="true" />
+    <field name="Name" type="String" label="Name" length="80" showInSummary="true" />
+    <field name="Address_Line_1" type="String" label="Address Line1" length="100" showInSummary="true" />
+    <field name="Address_Line_2" type="String" label="Address Line2" length="100" showInSummary="true" />
+    <field name="City" type="String" label="City" length="50" />
+    <field name="State" type="String" label="State" length="2" />
+    <field name="Zip_Code" type="String" label="Zip Code" length="20" />
+    <field name="Federal_Tax_ID" type="String" label="FederalTax#" length="50" />
+    <field name="State_Tax_ID" type="String" label="StateTax#" length="50" />
+    <field name="Sales_Tax_ID" type="String" label="SalesTax#" length="50" />
+    <field name="Web_Site" type="String" label="Web Site" length="100" />
+    <field name="Email_Address" type="String" label="Email Address" length="256" />
+    <field name="Phone_Number_1_Type" type="Int32" label="Phone Number1 Type" />
+    <field name="Phone_Number_1" type="String" label="Phone Number1" length="20" />
+    <field name="Phone_Number_2_Type" type="Int32" label="Phone Number2 Type" />
+    <field name="Phone_Number_2" type="String" label="Phone Number2" length="20" />
+    <field name="Phone_Number_3_Type" type="Int32" label="Phone Number3 Type" />
+    <field name="Phone_Number_3" type="String" label="Phone Number3" length="20" />
+    <field name="Fax_Number" type="String" label="Fax Number" length="20" />
+    <field name="Agreed_To_Terms_By" type="String" label="Agreed To Terms By" length="50" />
+    <field name="Agreed_To_Terms_On" type="DateTime" label="Agreed To Terms On" />
+    <field name="Note" type="String" label="Note" length="1999" />
+    <field name="Invoice_Number" type="Int32" label="Invoice Number" />
+    <field name="Order_Number" type="Int32" label="Order Number" />
+    <field name="Return_Number" type="Int32" label="Return Number" />
+    <field name="Appointment_Number" type="Int32" label="Appointment Number" />
+    <field name="Estimate_Number" type="Int32" label="Estimate Number" />
+    <field name="Tax_Rate_Parts" type="Double" label="Tax Rate Parts" />
+    <field name="Tax_Rate_Labor" type="Double" label="Tax Rate Labor" />
+    <field name="Logo" type="Byte[]" onDemand="true" sourceFields="" onDemandHandler="Company_ViewLogo" onDemandStyle="Thumbnail" allowQBE="false" allowSorting="false" label="Logo" />
+    <field name="Is_Deleted" type="Boolean" label="Is Deleted" />
+    <field name="Pricing_Matrix_ID" type="Int32" label="PricingMatrix#" />
+    <field name="Process_Date" type="DateTime" label="Process Date" />
+    <field name="Full_Schedule_Hour" type="Double" label="Full Schedule Hour" />
+    <field name="Service_Interval_Mile" type="Int32" label="Service Interval Mile" />
+    <field name="Service_Interval_Day" type="Int32" label="Service Interval Day" />
+    <field name="Ink_Saver" type="Boolean" label="Ink Saver" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Company View">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="Name" />
+        <dataField fieldName="Address_Line_1" />
+        <dataField fieldName="Address_Line_2" />
+        <dataField fieldName="City" columns="50" />
+        <dataField fieldName="State" columns="2" />
+        <dataField fieldName="Zip_Code" columns="20" />
+        <dataField fieldName="Company_ID" columns="15" hidden="true" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Company View">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Company View" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Company_ID" columns="15" />
+            <dataField fieldName="CompanyID" columns="15" />
+            <dataField fieldName="Name" />
+            <dataField fieldName="Address_Line_1" />
+            <dataField fieldName="Address_Line_2" />
+            <dataField fieldName="City" columns="50" />
+            <dataField fieldName="State" columns="2" />
+            <dataField fieldName="Zip_Code" columns="20" />
+            <dataField fieldName="Federal_Tax_ID" columns="50" />
+            <dataField fieldName="State_Tax_ID" columns="50" />
+            <dataField fieldName="Sales_Tax_ID" columns="50" />
+            <dataField fieldName="Web_Site" />
+            <dataField fieldName="Email_Address" />
+            <dataField fieldName="Phone_Number_1_Type" columns="15" />
+            <dataField fieldName="Phone_Number_1" columns="20" />
+            <dataField fieldName="Phone_Number_2_Type" columns="15" />
+            <dataField fieldName="Phone_Number_2" columns="20" />
+            <dataField fieldName="Phone_Number_3_Type" columns="15" />
+            <dataField fieldName="Phone_Number_3" columns="20" />
+            <dataField fieldName="Fax_Number" columns="20" />
+            <dataField fieldName="Agreed_To_Terms_By" columns="50" />
+            <dataField fieldName="Agreed_To_Terms_On" columns="10" />
+            <dataField fieldName="Note" />
+            <dataField fieldName="Invoice_Number" columns="15" />
+            <dataField fieldName="Order_Number" columns="15" />
+            <dataField fieldName="Return_Number" columns="15" />
+            <dataField fieldName="Appointment_Number" columns="15" />
+            <dataField fieldName="Estimate_Number" columns="15" />
+            <dataField fieldName="Tax_Rate_Parts" columns="15" />
+            <dataField fieldName="Tax_Rate_Labor" columns="15" />
+            <dataField fieldName="Logo" columns="15" />
+            <dataField fieldName="Is_Deleted" />
+            <dataField fieldName="Pricing_Matrix_ID" columns="15" />
+            <dataField fieldName="Process_Date" columns="10" />
+            <dataField fieldName="Full_Schedule_Hour" columns="15" />
+            <dataField fieldName="Service_Interval_Mile" columns="15" />
+            <dataField fieldName="Service_Interval_Day" columns="15" />
+            <dataField fieldName="Ink_Saver" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Company View">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="CompanyID" columns="15" />
+            <dataField fieldName="Name" />
+            <dataField fieldName="Address_Line_1" />
+            <dataField fieldName="Address_Line_2" />
+            <dataField fieldName="City" columns="50" />
+            <dataField fieldName="State" columns="2" />
+            <dataField fieldName="Zip_Code" columns="20" />
+            <dataField fieldName="Federal_Tax_ID" columns="50" />
+            <dataField fieldName="State_Tax_ID" columns="50" />
+            <dataField fieldName="Sales_Tax_ID" columns="50" />
+            <dataField fieldName="Web_Site" />
+            <dataField fieldName="Email_Address" />
+            <dataField fieldName="Phone_Number_1_Type" columns="15" />
+            <dataField fieldName="Phone_Number_1" columns="20" />
+            <dataField fieldName="Phone_Number_2_Type" columns="15" />
+            <dataField fieldName="Phone_Number_2" columns="20" />
+            <dataField fieldName="Phone_Number_3_Type" columns="15" />
+            <dataField fieldName="Phone_Number_3" columns="20" />
+            <dataField fieldName="Fax_Number" columns="20" />
+            <dataField fieldName="Agreed_To_Terms_By" columns="50" />
+            <dataField fieldName="Agreed_To_Terms_On" columns="10" />
+            <dataField fieldName="Note" />
+            <dataField fieldName="Invoice_Number" columns="15" />
+            <dataField fieldName="Order_Number" columns="15" />
+            <dataField fieldName="Return_Number" columns="15" />
+            <dataField fieldName="Appointment_Number" columns="15" />
+            <dataField fieldName="Estimate_Number" columns="15" />
+            <dataField fieldName="Tax_Rate_Parts" columns="15" />
+            <dataField fieldName="Tax_Rate_Labor" columns="15" />
+            <dataField fieldName="Is_Deleted" />
+            <dataField fieldName="Pricing_Matrix_ID" columns="15" />
+            <dataField fieldName="Process_Date" columns="10" />
+            <dataField fieldName="Full_Schedule_Hour" columns="15" />
+            <dataField fieldName="Service_Interval_Mile" columns="15" />
+            <dataField fieldName="Service_Interval_Day" columns="15" />
+            <dataField fieldName="Ink_Saver" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Delete" />
+      <action id="a6" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenKeySelected="true" whenClientScript="this.hasDetails()" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>

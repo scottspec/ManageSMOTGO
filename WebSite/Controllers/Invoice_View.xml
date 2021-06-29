@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="Invoice_View" conflictDetection="overwriteChanges" label="Invoice View" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"Invoice_View"."Invoice_ID" "Invoice_ID"
+	,"Invoice_View"."Start_Date" "Start_Date"
+	,"Invoice_View"."Completion_Date" "Completion_Date"
+	,"Invoice_View"."Invoice_Number" "Invoice_Number"
+	,"Invoice_View"."Location_ID" "Location_ID"
+	,"Invoice_View"."Invoice_Status_ID" "Invoice_Status_ID"
+	,"Invoice_View"."Odometer" "Odometer"
+	,"Invoice_View"."Invoice_Note" "Invoice_Note"
+	,"Invoice_View"."Is_Deleted" "Is_Deleted"
+	,"Invoice_View"."Vehicle_ID" "Vehicle_ID"
+	,"Invoice_View"."Vehicle" "Vehicle"
+	,"Invoice_View"."Mileage_Correction" "Mileage_Correction"
+	,"Invoice_View"."Customer_ID" "Customer_ID"
+	,"Invoice_View"."Customer" "Customer"
+	,"Invoice_View"."Invoice_Status" "Invoice_Status"
+	,"Invoice_View"."Tag" "Tag"
+	,"Invoice_View"."Vin" "Vin"
+	,"Invoice_View"."Promised_Date" "Promised_Date"
+	,"Invoice_View"."Picked_Up_Date" "Picked_Up_Date"
+	,"Invoice_View"."Part_Total_Taxable" "Part_Total_Taxable"
+	,"Invoice_View"."Part_Total_Non_Taxable" "Part_Total_Non_Taxable"
+	,"Invoice_View"."Labor_Total_Non_Taxable" "Labor_Total_Non_Taxable"
+	,"Invoice_View"."Labor_Total_Taxable" "Labor_Total_Taxable"
+	,"Invoice_View"."Part_Tax" "Part_Tax"
+	,"Invoice_View"."Labor_Tax" "Labor_Tax"
+	,"Invoice_View"."Sub_Total" "Sub_Total"
+	,"Invoice_View"."Total" "Total"
+	,"Invoice_View"."Processed_Date" "Processed_Date"
+	,"Invoice_View"."Invoice_Note_Saved_Name" "Invoice_Note_Saved_Name"
+	,"Invoice_View"."Vehicle_Note" "Vehicle_Note"
+	,"Invoice_View"."Invoice_Note_Saved_Note" "Invoice_Note_Saved_Note"
+	,"Invoice_View"."Estimate_Note" "Estimate_Note"
+	,"Invoice_View"."Alias_Status" "Alias_Status"
+	,"Invoice_View"."Company_ID" "Company_ID"
+from "dbo"."Invoice_View" "Invoice_View"
+]]></text>
+    </command>
+    <command id="Invoice_Status_IDIdentityCommand" type="Text" event="Inserted">
+      <text><![CDATA[select @@identity]]></text>
+      <output>
+        <fieldOutput fieldName="Invoice_Status_ID" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="Invoice_ID" type="Int32" allowNulls="false" label="Invoice#" showInSummary="true" isPrimaryKey="true" />
+    <field name="Start_Date" type="DateTime" label="Start Date" showInSummary="true" />
+    <field name="Completion_Date" type="DateTime" label="Completion Date" showInSummary="true" />
+    <field name="Invoice_Number" type="String" label="Invoice Number" length="50" showInSummary="true" />
+    <field name="Location_ID" type="Int32" label="Location#" showInSummary="true" />
+    <field name="Invoice_Status_ID" type="Int32" label="InvoiceStatus#" readOnly="true" />
+    <field name="Odometer" type="Int32" allowNulls="false" label="Odometer" readOnly="true" />
+    <field name="Invoice_Note" type="String" allowQBE="false" allowSorting="false" label="Invoice Note" />
+    <field name="Is_Deleted" type="Boolean" label="Is Deleted" />
+    <field name="Vehicle_ID" type="Int32" allowNulls="false" label="Vehicle#" />
+    <field name="Vehicle" type="String" allowNulls="false" label="Vehicle" readOnly="true" length="110" />
+    <field name="Mileage_Correction" type="Int32" allowNulls="false" label="Mileage Correction" readOnly="true" />
+    <field name="Customer_ID" type="Int32" allowNulls="false" label="Customer#" />
+    <field name="Customer" type="String" allowNulls="false" label="Customer" readOnly="true" length="206" />
+    <field name="Invoice_Status" type="String" label="Invoice Status" length="50" />
+    <field name="Tag" type="String" allowNulls="false" label="Tag" length="25" />
+    <field name="Vin" type="String" label="Vin" length="25" />
+    <field name="Promised_Date" type="DateTime" label="Promised Date" />
+    <field name="Picked_Up_Date" type="DateTime" label="Picked Up Date" />
+    <field name="Part_Total_Taxable" type="Decimal" label="Part Total Taxable" readOnly="true" />
+    <field name="Part_Total_Non_Taxable" type="Decimal" label="Part Total Non Taxable" readOnly="true" />
+    <field name="Labor_Total_Non_Taxable" type="Decimal" label="Labor Total Non Taxable" readOnly="true" />
+    <field name="Labor_Total_Taxable" type="Decimal" label="Labor Total Taxable" readOnly="true" />
+    <field name="Part_Tax" type="Double" label="Part Tax" readOnly="true" />
+    <field name="Labor_Tax" type="Double" label="Labor Tax" readOnly="true" />
+    <field name="Sub_Total" type="Decimal" label="Sub Total" readOnly="true" />
+    <field name="Total" type="Double" allowNulls="false" label="Total" readOnly="true" />
+    <field name="Processed_Date" type="DateTime" label="Processed Date" />
+    <field name="Invoice_Note_Saved_Name" type="String" label="Invoice Note Saved Name" length="50" />
+    <field name="Vehicle_Note" type="String" allowQBE="false" allowSorting="false" label="Vehicle Note" />
+    <field name="Invoice_Note_Saved_Note" type="String" allowQBE="false" allowSorting="false" label="Invoice Note Saved Note" />
+    <field name="Estimate_Note" type="String" allowQBE="false" allowSorting="false" label="Estimate Note" />
+    <field name="Alias_Status" type="String" label="Alias Status" length="50" />
+    <field name="Company_ID" type="Int32" allowNulls="false" label="Company#" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Invoice View" sortExpression="Start_Date desc">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="Invoice_ID" columns="15" hidden="true" />
+        <dataField fieldName="Start_Date" columns="10" />
+        <dataField fieldName="Completion_Date" columns="10" />
+        <dataField fieldName="Invoice_Number" columns="50" />
+        <dataField fieldName="Location_ID" columns="15" />
+        <dataField fieldName="Invoice_Status_ID" columns="15" />
+        <dataField fieldName="Odometer" columns="15" />
+        <dataField fieldName="Invoice_Note" rows="5" />
+        <dataField fieldName="Is_Deleted" />
+        <dataField fieldName="Vehicle_ID" columns="15" />
+        <dataField fieldName="Company_ID" />
+        <dataField fieldName="Total" aggregate="Sum" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Invoice View">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Invoice View" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Invoice_ID" columns="15" />
+            <dataField fieldName="Start_Date" columns="10" />
+            <dataField fieldName="Completion_Date" columns="10" />
+            <dataField fieldName="Invoice_Number" columns="50" />
+            <dataField fieldName="Location_ID" columns="15" />
+            <dataField fieldName="Invoice_Status_ID" columns="15" />
+            <dataField fieldName="Odometer" columns="15" />
+            <dataField fieldName="Invoice_Note" rows="5" />
+            <dataField fieldName="Is_Deleted" />
+            <dataField fieldName="Vehicle_ID" columns="15" />
+            <dataField fieldName="Vehicle" />
+            <dataField fieldName="Mileage_Correction" columns="15" />
+            <dataField fieldName="Customer_ID" columns="15" />
+            <dataField fieldName="Customer" />
+            <dataField fieldName="Invoice_Status" columns="50" />
+            <dataField fieldName="Tag" columns="25" />
+            <dataField fieldName="Vin" columns="25" />
+            <dataField fieldName="Promised_Date" columns="10" />
+            <dataField fieldName="Picked_Up_Date" columns="10" />
+            <dataField fieldName="Part_Total_Taxable" columns="15" />
+            <dataField fieldName="Part_Total_Non_Taxable" columns="15" />
+            <dataField fieldName="Labor_Total_Non_Taxable" columns="15" />
+            <dataField fieldName="Labor_Total_Taxable" columns="15" />
+            <dataField fieldName="Part_Tax" columns="15" />
+            <dataField fieldName="Labor_Tax" columns="15" />
+            <dataField fieldName="Sub_Total" columns="15" />
+            <dataField fieldName="Total" columns="15" />
+            <dataField fieldName="Processed_Date" columns="10" />
+            <dataField fieldName="Invoice_Note_Saved_Name" columns="50" />
+            <dataField fieldName="Vehicle_Note" rows="5" />
+            <dataField fieldName="Invoice_Note_Saved_Note" rows="5" />
+            <dataField fieldName="Estimate_Note" rows="5" />
+            <dataField fieldName="Alias_Status" columns="50" />
+            <dataField fieldName="Company_ID" columns="15" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Invoice View">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="Invoice_ID" columns="15" />
+            <dataField fieldName="Start_Date" columns="10" />
+            <dataField fieldName="Completion_Date" columns="10" />
+            <dataField fieldName="Invoice_Number" columns="50" />
+            <dataField fieldName="Location_ID" columns="15" />
+            <dataField fieldName="Invoice_Note" rows="5" />
+            <dataField fieldName="Is_Deleted" />
+            <dataField fieldName="Vehicle_ID" columns="15" />
+            <dataField fieldName="Customer_ID" columns="15" />
+            <dataField fieldName="Invoice_Status" columns="50" />
+            <dataField fieldName="Tag" columns="25" />
+            <dataField fieldName="Vin" columns="25" />
+            <dataField fieldName="Promised_Date" columns="10" />
+            <dataField fieldName="Picked_Up_Date" columns="10" />
+            <dataField fieldName="Processed_Date" columns="10" />
+            <dataField fieldName="Invoice_Note_Saved_Name" columns="50" />
+            <dataField fieldName="Vehicle_Note" rows="5" />
+            <dataField fieldName="Invoice_Note_Saved_Note" rows="5" />
+            <dataField fieldName="Estimate_Note" rows="5" />
+            <dataField fieldName="Alias_Status" columns="50" />
+            <dataField fieldName="Company_ID" columns="15" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Delete" />
+      <action id="a6" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenKeySelected="true" whenClientScript="this.hasDetails()" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>
